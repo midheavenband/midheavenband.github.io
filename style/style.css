@@ -1,0 +1,445 @@
+@charset "UTF-8";
+/* CSS Document */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  background-color: white;
+  overflow-x: hidden;
+}
+/* ----------------------------------------- */
+/* PAGE WRAP (slides down on logo click)     */
+/* ----------------------------------------- */
+#pageWrap {
+  transform: translateY(0);
+  transition: transform 0.6s ease;
+}
+#pageWrap.page-down {
+  transform: translateY(200px);
+}
+/* ----------------------------------------- */
+/* LINKS PANEL (revealed by logo click)      */
+/* ----------------------------------------- */
+#linksPanel {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* keep links centered */
+  gap: 2px;
+  padding: 10px 0;
+  background-color: white;
+  color: black;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.6s ease;
+  z-index: 9999;
+}
+#linksPanel.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+#linksPanel:not(.show) {
+  opacity: 0;
+  pointer-events: none;
+}
+#linksPanel a {
+  color: black;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#linksPanel a:hover {
+  color: black;
+  transition: 0.5s;
+  transform: scale(1.05);
+}
+/* ----------------------------------------- */
+/* NAVIGATION                                */
+/* ----------------------------------------- */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+.nav-item {
+	  display: flex;
+  justify-content: center;
+	
+}
+
+.nav-item img{
+	width: 250px;
+}
+
+nav a img {
+  position: relative;
+  z-index: 1;
+}
+nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+  border-radius: 30px;
+  background-color: white;
+  transition: transform 0.2s ease;
+}
+nav a:hover {
+  transform: scale(1.1);
+}
+#logoBtn.move-up {
+  animation: headMoveUp 0.8s forwards;
+}
+#logoBtn {
+  height: 250px;
+  
+}
+/* ----------------------------------------- */
+/* CONTAINER                                 */
+/* ----------------------------------------- */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3%;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+/* ----------------------------------------- */
+/* HEAD IMAGE                                */
+/* ----------------------------------------- */
+#head {
+  width: 250px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  transform-origin: center bottom;
+  filter: blur(0px);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+#head:hover {
+  transform: scale(1.1);
+  filter: blur(0px);
+}
+#head.move-up {
+  animation: headMoveUp 0.8s forwards;
+}
+/* BOUNCE MOVE-UP ANIMATION */
+@keyframes headMoveUp {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  30% {
+    transform: translateY(-120px) scale(1.15);
+  }
+  50% {
+    transform: translateY(-100px) scale(1.12);
+  }
+  70% {
+    transform: translateY(-110px) scale(1.13);
+  }
+  100% {
+    transform: translateY(-100px) scale(1.1);
+  }
+}
+#about {
+  width: 50%;
+  text-align-last: left;
+  margin-left: 27%;
+}
+/* ----------------------------------------- */
+/* CONTENT FADE-IN                           */
+/* ----------------------------------------- */
+#content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+#content img {
+  height: 250px;
+}
+/* --------- ALBUM HORIZONTAL SCROLLER --------- */
+.album-row {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 40px;
+  overflow-x: visible;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  padding: 5px;
+  cursor: grab;
+  width: 100%;
+}
+.album-row img {
+  height: 250px;
+  flex-shrink: 0;
+  filter: blur(0);
+  border-radius: 0;
+  transition:
+    filter 1s ease, transform 2s ease, border-radius 2s ease;
+}
+/* OTHER IMAGES: blurred + rounded + soft table shadow */
+.album-row:hover img {
+  filter: blur(5px);
+  border-radius: 20px;
+}
+.album-row img:hover {
+  filter: blur(0);
+  border-radius: 0;
+}
+.shows-row {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 40px;
+  overflow-x: visible;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  padding: 5px;
+  cursor: grab;
+  width: 100%;
+}
+.shows-row img {
+  height: 600px;
+  flex-shrink: 0;
+  filter: blur(0);
+  border-radius: 0;
+  transition:
+  filter 1s ease, transform 2s ease, border-radius 2s ease;
+}
+/* OTHER IMAGES: blurred + rounded + soft table shadow */
+.shows-row:hover img {
+  filter: blur(5px);
+  border-radius: 20px;
+}
+.shows-row img:hover {
+  filter: blur(0);
+  border-radius: 0;
+}
+.row img:hover {
+  filter: blur(0);
+  border-radius: 0;
+}
+#content1 {
+  opacity: 1; /* make it visible */
+  transform: none; /* remove transition offset */
+}
+#content1 img {
+  height: 300px;
+}
+#content1 img:hover {
+  transform: scale(1.1);
+  transition: 1s ease;
+  filter: blur(0px);
+}
+#content2 {
+  opacity: 1; /* make it visible */
+  transform: none; /* remove transition offset */
+}
+#content2 img {
+  height: 350px;
+}
+#content2 img:hover {
+  transform: scale(1.1);
+  transition: 1s ease;
+  filter: blur(0px);
+}
+#content2.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+#content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+#footer {
+  background-color: black;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  width: 100%;
+  position: relative; /* stays at the bottom of the content */
+  margin-top: 50px; /* space above footer */
+}
+#footer p {
+  margin: 0;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+#footer img {
+  width: 20px;
+}
+#footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#footer .socials a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+#footer .socials img:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+/* PAGE FADE EFFECTS */
+body {
+  opacity: 0;
+  transition: opacity 0.6s ease; /* you can change speed */
+}
+body.fade-in {
+  opacity: 1;
+}
+body.fade-out {
+  opacity: 0;
+}
+.show {
+min-width: 0;
+	
+}
+.abouttheep {
+  width: 250px;
+  display: contents;
+  align-content: center;
+}
+.eptext {
+  text-align: left;
+  width: 250px;
+}
+.video {
+  margin-bottom: 10%;
+}
+
+
+
+/* ========================================= */
+/* MOBILE RESPONSIVE FIXES                   */
+/* ========================================= */
+@media (max-width: 768px) {
+
+  /* GENERAL */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* PAGE WRAP SLIDE – reduce movement */
+  #pageWrap.page-down {
+    transform: translateY(120px);
+  }
+
+  /* LINKS PANEL */
+  #linksPanel {
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 12px 10px;
+  }
+
+  #linksPanel a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  /* NAV */
+  nav {
+    gap: 30px;
+  }
+
+  nav a {
+    margin: 20px;
+  }
+
+  #logoBtn,
+  #head {
+    width: 180px;
+  }
+
+  /* Disable hover zoom on mobile (important) */
+  #head:hover,
+  nav a:hover {
+    transform: none;
+  }
+
+  /* HEAD MOVE-UP – smaller jump */
+  @keyframes headMoveUp {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(-60px) scale(1.05); }
+  }
+
+  /* CONTAINER */
+  .container {
+    margin-top: 20%;
+    height: auto;
+    padding: 0 15px;
+  }
+
+  /* ABOUT TEXT */
+  #about {
+	  marign-right: 50px;
+  }
+
+  /* CONTENT IMAGES */
+  #content img,
+  #content1 img,
+  #content2 img {
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* ALBUM ROW */
+  .album-row,
+  .shows-row {
+    gap: 20px;
+    align-items: center;
+  }
+
+  .album-row img,
+  .shows-row img {
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Remove blur effects on mobile */
+  .album-row:hover img,
+  .shows-row:hover img {
+    filter: none;
+    border-radius: 0;
+  }
+
+  /* EP TEXT */
+  .abouttheep,
+  .eptext {
+    width: 100%;
+    text-align: left;
+  }
+
+  /* FOOTER */
+  #footer {
+   align-content: center;
+  }
+
+  #footer p {
+    font-size: 14px;
+  }
+
+  #footer .socials {
+    gap: 15px;
+  }
+
+  /* VIDEO SPACING */
+  .video {
+    margin-bottom: 20%;
+  }
+
+

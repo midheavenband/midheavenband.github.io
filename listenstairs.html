@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Midheaven's Stairs You Have To Climb</title>
+<style>
+/* FADE IN EFFECT */
+body {
+	opacity: 0;
+	animation: fadeIn 1.5s ease forwards;
+}
+@keyframes fadeIn {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+/* FADE OUT EFFECT (activated with JS) */
+.fade-out {
+	animation: fadeOut 0.8s ease forwards;
+}
+@keyframes fadeOut {
+from {
+opacity: 1;
+}
+to {
+opacity: 0;
+}
+}
+/* Existing styling */
+body {
+	display: flex;
+	justify-content: center;
+	background-size: cover;
+	align-items: center;
+	min-height: 100vh;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	overflow: auto;
+}
+.listen-box {
+	background: #fff;
+	margin: 2%;
+	padding: 40px;
+	text-align: center;
+	border-radius: 20px;
+	max-width: 400px;
+	width: 90%;
+	box-shadow: 0 40px 40px rgba(0,0,0,0.1);
+}
+/* Smooth animation for the whole bar */
+.platform-link {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: white;
+	border-color: whitesmoke;
+	padding: 10px 20px;
+	margin: 8px 0;
+	border-radius: 30px;
+	text-decoration: none;
+	color: #000;
+	transition: transform 1s, background-color 1s;
+}
+.platform-link img {
+	height: 24px;
+}
+.platform-link:hover {
+	background-color: white;
+	filter: drop-shadow(1px 1px 1px #D5D5D5);
+	transition: 1s;
+	transform: scale(1.03);
+}
+.platform-link:hover img {
+	transform: scale(1.05);
+	transition: 1s;
+}
+.platform-button {
+	padding: 6px 20px;
+	border: 1px solid #000;
+	background: white;
+	color: #0B0B0B;
+	border-color: whitesmoke;
+	border-radius: 30px;
+	cursor: pointer;
+	transition: all 0.3s;
+	font-size: 12px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+.platform-link:hover .platform-button {
+	background-color: white;
+	color: black;
+	border-color: whitesmoke;
+	transform: scale(1.1);
+}
+.platform-button:hover {
+	color: black!important;
+	border-color: grey!important;
+	background-color: white!important;
+	transform: scale(2);
+	transition: 0.5s;
+}
+.Logo img {
+	transition: transform 1s;
+	height: 250px;
+}
+.Logo img:hover {
+	transform: scale(1.1);
+}
+.aboutlink {
+	color: black;
+	border-radius: 5px;
+	border-color: whitesmoke;
+	text-decoration: none;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+</style>
+</head>
+<body>
+<div class="listen-box">
+  <div class="Logo"> <a href="index.html"><img src="img/SYHTC_Release.jpg" alt="Stairs You Have To Climb Cover"></a>
+    <h4>Stairs You Have To Climb</h4>
+    <p></p>
+  </div>
+  
+  <!-- Streaming Platforms --> 
+  <a href="https://open.spotify.com/track/3z0Oc1QpVAkMSGoy5mtK5b" class="platform-link fade-link"> <img src="img/icons/Listen/spotify.png" alt="Spotify">
+  <button class="platform-button">PLAY</button>
+  </a> <a href="https://geo.music.apple.com/sk/album/_/1855854505?app=music&at=1000lHKX&ct=linktree_http&i=1855854506&itscg=30200&itsct=lt_m&ls=1&mt=1" class="platform-link fade-link"> <img src="img/icons/Listen/applemusic.png" alt="Apple Music">
+  <button class="platform-button">PLAY</button>
+  </a> <a href="https://music.youtube.com/watch?v=odkU9iwxmhg" class="platform-link fade-link"> <img src="img/icons/Listen/youtubemusic.png" alt="YouTube Music">
+  <button class="platform-button">PLAY</button>
+  </a> <a href="https://music.amazon.com/albums/B0G3D3RG38?trackAsin=B0G3D12XVN" class="platform-link fade-link"> <img src="img/icons/Listen/amazonmusic.png" alt="Amazon Music">
+  <button class="platform-button">PLAY</button>
+  </a> <a href="https://www.deezer.com/sk/album/861581232" class="platform-link fade-link"> <img src="img/icons/Listen/deezer.png" alt="Deezer">
+  <button class="platform-button">PLAY</button>
+  </a> <a href="https://youtu.be/FYhz5I7d9Wk?si=qdMzRmlw3B81kbUo" class="platform-link fade-link"> <img src="img/icons/Listen/youtube.png" alt="YouTube">
+  <button class="platform-button">WATCH</button>
+  </a> <a href="https://geo.music.apple.com/sk/album/_/1855854505?app=itunes&at=1000lHKX&ct=linktree_http&i=1855854506&itscg=30200&itsct=lt_m&ls=1&mt=1" class="platform-link fade-link"> <img src="img/icons/Listen/itunes.png" alt="Itunes">
+  <button class="platform-button">DOWNLOAD</button>
+  </a> <a href="https://midheaventheband.bandcamp.com/track/stairs-you-have-to-climb" class="platform-link fade-link"> <img src="img/icons/Listen/bandcamp.png" alt="Bandcamp">
+  <button class="platform-button">DOWNLOAD</button>
+  </a> <br>
+  <a href="https://genius.com/Stredneba-stairs-you-have-to-climb-lyrics" class="aboutlink">
+  <button>ABOUT THE SINGLE</button>
+  </a> </div>
+
+<!-- FADE OUT SCRIPT --> 
+<script>
+document.querySelectorAll(".fade-link").forEach(link => {
+  link.addEventListener("click", function(e) {
+
+    e.preventDefault(); // Stop immediate navigation
+
+    const targetUrl = this.href;
+
+    document.body.classList.add("fade-out");
+
+    setTimeout(() => {
+      window.location.href = targetUrl;
+    }, 700); // matches fadeOut animation duration
+  });
+});
+</script>
+</body>
+</html>
