@@ -30,12 +30,12 @@ html, body {
   justify-content: center; /* keep links centered */
   gap: 2px;
   padding: 10px 0;
-  background-color: white;
+	background-color: white;
+  z-index: 2000;
   color: black;
   opacity: 1;
   pointer-events: auto;
   transition: opacity 0.6s ease;
-  z-index: 9999;
 }
 #linksPanel.show {
   opacity: 1;
@@ -50,12 +50,12 @@ html, body {
   text-decoration: none;
   padding: 5px 15px;
   border-radius: 8px;
+
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 #linksPanel a:hover {
   color: black;
   transition: 0.5s;
-  transform: scale(1.05);
 }
 /* ----------------------------------------- */
 /* NAVIGATION                                */
