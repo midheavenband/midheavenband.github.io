@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://midheavenband.github.io/</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://midheavenband.github.io/listen.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://midheavenband.github.io/discography.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://midheavenband.github.io/about.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://midheavenband.github.io/shows.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://midheavenband.github.io/listenstairs.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://midheavenband.github.io/instrumental_ep.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://midheavenband.github.io/listenalbum.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://midheavenband.github.io/trust.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://midheavenband.github.io/stairs.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://midheavenband.github.io/newest.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://midheavenband.github.io/listenstairsinst.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
