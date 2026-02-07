@@ -1,6 +1,4 @@
-@charset "UTF-8";
-/* CSS Document */
-html, body {
+@charset "UTF-8"; /* CSS Document */ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -8,29 +6,24 @@ html, body {
   font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
   background-color: white;
   overflow-x: hidden;
-}
-/* ----------------------------------------- */
-/* PAGE WRAP (slides down on logo click)     */
-/* ----------------------------------------- */
-#pageWrap {
+} /* ----------------------------------------- */ /* PAGE WRAP (slides down on logo click) */ /* ----------------------------------------- */ #pageWrap {
   transform: translateY(0);
   transition: transform 0.6s ease;
 }
 #pageWrap.page-down {
   transform: translateY(200px);
-}
-/* ----------------------------------------- */
-/* LINKS PANEL (revealed by logo click)      */
-/* ----------------------------------------- */
+} /* ----------------------------------------- */ /* LINKS PANEL (revealed by logo click) */ /* ----------------------------------------- */
 #linksPanel {
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
+    align-items: center; /* centers nav items horizontally */
+    gap: 2px;
+    margin: 0 auto; /* ensures nav itself is centered */
   justify-content: center; /* keep links centered */
-  gap: 2px;
   padding: 10px 0;
-	background-color: white;
+  background-color: white;
   z-index: 2000;
   color: black;
   opacity: 1;
@@ -50,32 +43,31 @@ html, body {
   text-decoration: none;
   padding: 5px 15px;
   border-radius: 8px;
-
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 #linksPanel a:hover {
-  color: black;
+  color: grey;
   transition: 0.5s;
-}
-/* ----------------------------------------- */
-/* NAVIGATION                                */
-/* ----------------------------------------- */
-nav {
+} /* ----------------------------------------- */ /* NAVIGATION */ /* ----------------------------------------- */ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 60px;
 }
+
+nav {
+    flex-direction: column;
+    align-items: center; /* centers nav items horizontally */
+    margin: 0 auto; /* ensures nav itself is centered */
+}
+
 .nav-item {
-	  display: flex;
+  display: flex;
   justify-content: center;
-	
 }
-
-.nav-item img{
-	width: 250px;
+.nav-item img {
+  width: 250px;
 }
-
 nav a img {
   position: relative;
   z-index: 1;
@@ -88,21 +80,15 @@ nav a {
   border-radius: 30px;
   background-color: white;
   transition: transform 0.2s ease;
+  margin: 0; /* remove margin so flex centering works */
 }
-nav a:hover {
-  transform: scale(1.1);
-}
+
 #logoBtn.move-up {
   animation: headMoveUp 0.8s forwards;
 }
 #logoBtn {
   height: 250px;
-  
-}
-/* ----------------------------------------- */
-/* CONTAINER                                 */
-/* ----------------------------------------- */
-.container {
+} /* ----------------------------------------- */ /* CONTAINER */ /* ----------------------------------------- */ .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,11 +97,7 @@ nav a:hover {
   height: 100%;
   text-align: center;
   position: relative;
-}
-/* ----------------------------------------- */
-/* HEAD IMAGE                                */
-/* ----------------------------------------- */
-#head {
+} /* ----------------------------------------- */ /* HEAD IMAGE */ /* ----------------------------------------- */ #head {
   width: 250px;
   position: relative;
   z-index: 2;
@@ -130,9 +112,7 @@ nav a:hover {
 }
 #head.move-up {
   animation: headMoveUp 0.8s forwards;
-}
-/* BOUNCE MOVE-UP ANIMATION */
-@keyframes headMoveUp {
+} /* BOUNCE MOVE-UP ANIMATION */ @keyframes headMoveUp {
   0% {
     transform: translateY(0) scale(1) rotate(0deg);
   }
@@ -153,20 +133,14 @@ nav a:hover {
   width: 50%;
   text-align-last: left;
   margin-left: 27%;
-}
-/* ----------------------------------------- */
-/* CONTENT FADE-IN                           */
-/* ----------------------------------------- */
-#content {
+} /* ----------------------------------------- */ /* CONTENT FADE-IN */ /* ----------------------------------------- */ #content {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease, transform 1s ease;
 }
 #content img {
   height: 250px;
-}
-/* --------- ALBUM HORIZONTAL SCROLLER --------- */
-.album-row {
+} /* --------- ALBUM HORIZONTAL SCROLLER --------- */ .album-row {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -183,11 +157,8 @@ nav a:hover {
   flex-shrink: 0;
   filter: blur(0);
   border-radius: 0;
-  transition:
-    filter 1s ease, transform 2s ease, border-radius 2s ease;
-}
-/* OTHER IMAGES: blurred + rounded + soft table shadow */
-.album-row:hover img {
+  transition: filter 1s ease, transform 2s ease, border-radius 2s ease;
+} /* OTHER IMAGES: blurred + rounded + soft table shadow */ .album-row:hover img {
   filter: blur(5px);
   border-radius: 20px;
 }
@@ -212,11 +183,8 @@ nav a:hover {
   flex-shrink: 0;
   filter: blur(0);
   border-radius: 0;
-  transition:
-  filter 1s ease, transform 2s ease, border-radius 2s ease;
-}
-/* OTHER IMAGES: blurred + rounded + soft table shadow */
-.shows-row:hover img {
+  transition: filter 1s ease, transform 2s ease, border-radius 2s ease;
+} /* OTHER IMAGES: blurred + rounded + soft table shadow */ .shows-row:hover img {
   filter: blur(5px);
   border-radius: 20px;
 }
@@ -229,8 +197,7 @@ nav a:hover {
   border-radius: 0;
 }
 #content1 {
-  opacity: 1; /* make it visible */
-  transform: none; /* remove transition offset */
+  opacity: 1; /* make it visible */ transform: none; /* remove transition offset */
 }
 #content1 img {
   height: 300px;
@@ -241,8 +208,7 @@ nav a:hover {
   filter: blur(0px);
 }
 #content2 {
-  opacity: 1; /* make it visible */
-  transform: none; /* remove transition offset */
+  opacity: 1; /* make it visible */ transform: none; /* remove transition offset */
 }
 #content2 img {
   height: 350px;
@@ -261,14 +227,17 @@ nav a:hover {
   transform: translateY(0);
 }
 #footer {
-  background-color: black;
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
-  width: 100%;
-  position: relative; /* stays at the bottom of the content */
-  margin-top: 50px; /* space above footer */
+	background-color: black;
+	color: white;
+    display: flex;
+	height: 200px;
+    flex-direction: column;
+    align-items: center; /* horizontal centering */
+    justify-content: center; /* vertical centering if needed */
+    text-align: center; /* keep text centered */
+    margin: 50px auto 0 auto; /* keep spacing above */
 }
+
 #footer p {
   margin: 0;
   font-size: 16px;
@@ -291,9 +260,7 @@ nav a:hover {
 #footer .socials img:hover {
   transform: scale(1.1);
   transition: transform 0.2s ease;
-}
-/* PAGE FADE EFFECTS */
-body {
+} /* PAGE FADE EFFECTS */ body {
   opacity: 0;
   transition: opacity 0.6s ease; /* you can change speed */
 }
@@ -304,8 +271,7 @@ body.fade-out {
   opacity: 0;
 }
 .show {
-min-width: 0;
-	
+  min-width: 0;
 }
 .abouttheep {
   width: 250px;
@@ -318,128 +284,67 @@ min-width: 0;
 }
 .video {
   margin-bottom: 10%;
-}
-
-
-
-/* ========================================= */
-/* MOBILE RESPONSIVE FIXES                   */
-/* ========================================= */
-@media (max-width: 768px) {
-
-  /* GENERAL */
-  html, body {
+} /* ========================================= */ /* MOBILE RESPONSIVE FIXES */ /* ========================================= */ @media (max-width: 768px) { /* GENERAL */ html, body {
     overflow-x: hidden;
-  }
-
-  /* PAGE WRAP SLIDE – reduce movement */
-  #pageWrap.page-down {
+  } /* PAGE WRAP SLIDE – reduce movement */ #pageWrap.page-down {
     transform: translateY(120px);
-  }
-
-  /* LINKS PANEL */
-  #linksPanel {
+  } /* LINKS PANEL */ #linksPanel {
     flex-wrap: wrap;
     gap: 6px;
     padding: 12px 10px;
   }
-
   #linksPanel a {
     padding: 6px 10px;
     font-size: 14px;
-  }
-
-  /* NAV */
-  nav {
+  } /* NAV */ nav {
     gap: 30px;
   }
-
   nav a {
     margin: 20px;
   }
-
-  #logoBtn,
-  #head {
+  #logoBtn, #head {
     width: 180px;
-  }
-
-  /* Disable hover zoom on mobile (important) */
-  #head:hover,
-  nav a:hover {
+  } /* Disable hover zoom on mobile (important) */ #head:hover, nav a:hover {
     transform: none;
-  }
-
-  /* HEAD MOVE-UP – smaller jump */
-  @keyframes headMoveUp {
-    0% { transform: translateY(0) scale(1); }
-    100% { transform: translateY(-60px) scale(1.05); }
-  }
-
-  /* CONTAINER */
-  .container {
+  } /* HEAD MOVE-UP – smaller jump */ @keyframes headMoveUp {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      transform: translateY(-60px) scale(1.05);
+    }
+  } /* CONTAINER */ .container {
     margin-top: 20%;
     height: auto;
     padding: 0 15px;
-  }
-
-  /* ABOUT TEXT */
-  #about {
-	  marign-right: 50px;
-  }
-
-  /* CONTENT IMAGES */
-  #content img,
-  #content1 img,
-  #content2 img {
+  } /* ABOUT TEXT */ #about {
+    margin-right: 50px;
+  } /* CONTENT IMAGES */ #content img, #content1 img, #content2 img {
     height: auto;
     width: 100%;
     max-width: 300px;
-  }
-
-  /* ALBUM ROW */
-  .album-row,
-  .shows-row {
+  } /* ALBUM ROW */ .album-row, .shows-row {
     gap: 20px;
     align-items: center;
   }
-
-  .album-row img,
-  .shows-row img {
+  .album-row img, .shows-row img {
     height: auto;
     width: 100%;
     max-width: 300px;
-  }
-
-  /* Remove blur effects on mobile */
-  .album-row:hover img,
-  .shows-row:hover img {
+  } /* Remove blur effects on mobile */ .album-row:hover img, .shows-row:hover img {
     filter: none;
     border-radius: 0;
-  }
-
-  /* EP TEXT */
-  .abouttheep,
-  .eptext {
+  } /* EP TEXT */ .abouttheep, .eptext {
     width: 100%;
     text-align: left;
+  } /* FOOTER */ #footer {
+    align-content: center;
   }
-
-  /* FOOTER */
-  #footer {
-   align-content: center;
-  }
-
   #footer p {
     font-size: 14px;
   }
-
   #footer .socials {
     gap: 15px;
-  }
-
-  /* VIDEO SPACING */
-  .video {
+  } /* VIDEO SPACING */ .video {
     margin-bottom: 20%;
   }
-
-
