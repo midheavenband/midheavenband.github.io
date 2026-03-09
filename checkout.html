@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Checkout I Not That Far Away</title>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  max-width: 100%; /* Ensure body is responsive */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body hr {
+  opacity: 0.2;
+}
+
+#pageWrap {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 20px; /* Optional padding for spacing */
+}
+
+
+.checkout-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* Default two-column layout */
+  min-height: 70vh; /* Remove this line if you experience issues */
+  height: auto; /* Allow height to adjust dynamically */
+}
+/* LEFT */
+.checkout-left {
+  padding: 80px;
+  max-width: 600px;
+}
+.checkout-left h2 {
+  margin-bottom: 20px;
+}
+.express-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.bank-box {
+  background: #f6f6f6;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  font-size: 14px;
+}
+.bank-box p {
+  margin: 8px 0;
+}
+.bank-info-text {
+  font-size: 14px;
+  opacity: 0.8;
+}
+.shipping-list {
+  margin: 10px 0 20px;
+  padding-left: 20px;
+}
+.email-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+	
+	.email-btn-order {
+  display: inline-block;
+  align-content: flex-end;
+  padding: 12px 20px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+		border: 1px solid black;
+}
+	
+.email-btn:hover {
+  background: #141414;
+}
+
+.divider {
+  text-align: center;
+  margin: 30px 0;
+  opacity: 0.6;
+}
+/* FORM */
+.checkout-section {
+  margin-bottom: 40px;
+}
+.checkout-section h3 {
+  margin-bottom: 15px;
+}
+.checkout-section input, .checkout-section select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* RIGHT SIDE */
+.checkout-right {
+  padding: 80px 60px;
+}
+.order-summary {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.summary-product {
+  display: flex; /* Changed from grid to flex for better control */
+  align-items: center; /* Ensure image and text are vertically aligned */
+  gap: 15px; /* Space between image and text */
+  margin-bottom: 30px;
+}
+
+/* Make image circular, align it properly */
+.summary-product img {
+  width: 120px; /* Adjust image size */
+  height: 120px; /* Make it square */
+  object-fit: cover; /* Keep the image from stretching */
+  border-radius: 8px; /* Slight rounded corners */
+  margin-right: 20px; /* Space between image and text */
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column; /* Stack the product name and price vertically */
+  justify-content: center; /* Center the content vertically */
+  gap: 10px; /* Space between the product name and price */
+}
+
+/* Align the product name and price */
+.product-name {
+  font-size: 16px;
+  line-height: 1.4;
+		text-align: right;
+}
+
+.product-price {
+  font-size: 14px;
+  color: #333; /* You can tweak this color */
+	text-align: right;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Order Policy Section */
+.order-policy {
+  padding: 20px;
+  background: black;
+  color: white;
+}
+
+.order-policy h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.order-info-text {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.order-info-text strong {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  /* Use flexbox layout for mobile */
+  .checkout-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack the two columns vertically */
+    padding: 0 20px;
+  }
+
+  .checkout-left, .checkout-right {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
+
+.order-summary {
+  max-width: 100%; /* Allow order summary to take full width */
+  margin: 0 auto;
+}
+
+.summary-product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+}
+
+.summary-product img {
+  width: 100%; /* Adjust the image size */
+  margin-bottom: 10px;
+}
+
+.checkout-section input, .checkout-section select {
+  width: 100%; /* Ensure input fields take full width */
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.pay-now, .email-btn {
+  text-align: center;
+  padding: 16px;
+  font-size: 16px;
+}
+
+.order-policy {
+  padding: 20px;
+  background: black;
+  color: white;
+
+}
+
+.order-policy h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.order-info-text {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.order-info-text strong {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .order-summary {
+    max-width: 100%;
+  }
+
+  .summary-product img {
+    width: 50%; /* Make images fully responsive */
+  }
+}
+</style>
+</head>
+
+<body>
+<div id="pageWrap">
+  <div class="checkout-wrapper"> 
+    
+    <!-- LEFT SIDE -->
+    <div class="checkout-left">
+      
+      <!-- CONTACT -->
+      <div class="checkout-section">
+		 
+        <h3>Manual Order — Direct Support Edition</h3>
+        <p class="bank-info-text"> To create your order, please send a  <b>bank transfer using the details below.</b>
+         </p>
+        <div class="bank-box">
+          <p><strong>Account name:</strong> Jakub Hudaček</p>
+          <p><strong>IBAN:</strong> SK12 3456 7890 1234 5678 9012</p>
+          <p><strong>Amount:</strong> $20.98</p>
+          <p><strong>Reference:</strong> NTFA + Your Full Name</p>
+        </div>
+        <hr>
+        <h3>After Payment</h3>
+        <p class="bank-info-text">To complete your order, please email us a  <b>screenshot together with your shipping details. </b> </p>
+        <div class="bank-box">
+				<p>Example:</p><br>
+			 <p><strong>Subject - Not That Far Away, CD</strong></p><br>
+	
+          <p><strong>Full Name</strong></p>
+          <p><strong>Adress</strong></p>
+          <p><strong>Postal Code, City</strong></p>
+          <p><strong>Country</strong></p><br>
+			<p><strong>Screenshot - Receipt</strong></p>
+        </div>
+        <a href="mailto:midheavenoff@gmail.com" class="email-btn"><b>E-MAIL EVERYTHING HERE</b> </a> </div>
+		  <div class="order-policy">
+        <p class="order-info-text">
+          Please note that due to the custom manufacturing process of our products, some orders may be delayed by up to 10 business days. We will do our best to process and ship your order as quickly as possible.
+        </p>
+        <p class="order-info-text">
+          If you are not satisfied with your order, we offer full refunds within 30 days of receiving your purchase.<br><br> If you encounter any issues, please don't hesitate to reach out to us at <strong>midheavenoff@gmail.com</strong>.
+        </p>
+		  
+		  
+      </div>
+    </div>
+	  
+	  
+  
+    <!-- RIGHT SIDE -->
+    <div class="checkout-right">
+      <div class="order-summary">
+        <div class="summary-product">
+          <img src="img/shop/ntfa.jpg" alt="Album" class="product-image">
+          <div class="product-info">
+            <div class="product-name">NOT THAT FAR AWAY<br> - LIMITED EDITION CD</div>
+            <div class="product-price">$15,99</div>
+          </div>
+        </div>
+
+        <div class="summary-row"> <span>Subtotal</span> <span>$15.99</span> </div>
+        <div class="summary-row"> <span>Shipping</span> <span>$4.99</span> </div>
+        <hr>
+        <div class="summary-row total"> <span>Total</span> <span>$20.98</span> </div>
+      </div>
+        
+     
+        
+    </div>
+  </div>
+</div>
+</body>
+</html>
