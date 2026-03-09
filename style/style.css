@@ -823,23 +823,22 @@ nav a {
   display: none;
   position: fixed;
   z-index: 5000;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
 
   background: rgba(255,255,255,0.3);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 
-  /* CENTERING FIX */
-  display: flex;
   align-items: center;
   justify-content: center;
 
   overflow-y: auto;
   padding: 20px;
   box-sizing: border-box;
+}
+
+.modal.open {
+  display: flex;
 }
 
 .modal-content {
@@ -859,7 +858,6 @@ nav a {
   margin: auto;
   padding: 40px;
 }
-
 .modal-content-order hr {
 	opacity: 0.5;
 }
