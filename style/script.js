@@ -22,6 +22,17 @@ if (head && content) {
   });
 }
 
+const menuToggle = document.getElementById("menuToggle");
+const sideMenu = document.getElementById("sideMenu");
+const menuBlur = document.getElementById("menuBlur");
+
+menuToggle.addEventListener("click", () => {
+  sideMenu.classList.toggle("open");
+  menuBlur.classList.toggle("active");
+});
+
+
+
 // -----------------------------------------
 // LOGO CLICK – SLIDE PAGE + TOGGLE LINKS
 // -----------------------------------------
@@ -110,3 +121,5 @@ slider.addEventListener('touchmove', (e) => {
   const walk = (x - startX) * 2;
   slider.scrollLeft = scrollLeft - walk;
 });
+
+
