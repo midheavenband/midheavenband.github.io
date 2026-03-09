@@ -145,5 +145,65 @@
       The band is also known as Stredneba. </p>
   </section>
 </footer>
+<!-- Event Popup -->
+<div id="eventModal" class="modal">
+  <div class="modal-content"> <span class="close">&times;</span>
+    <h1>RADIO RAPEŠ</h1>
+    <div class="modal-body"> <img src="img/Live/Radio-Popup.jpg" alt="Radio show poster">
+      <div class="modal-left"> <br>
+        <p>Midheaven played live on Rádio Rapeš on 10 March 2026 from 3PM to 4PM (CET), presenting and discussing the band’s album Not That Far Away. The one-hour broadcast focused on the ideas behind the record, the circumstances in which it was written, and the atmosphere that shaped the songs.<br><br>
+Written during a four-month stay abroad in Austria, Not That Far Away explores themes of distance, longing, and the quiet comfort that sometimes comes from missing someone. The album grew out of a period marked by solitary evenings, long working days, and the experience of feeling emotionally connected to someone while being separated by hundreds of kilometers.<br><br>
+Much of the record was shaped by this sense of living between places. While physically present in unfamiliar surroundings, thoughts often returned to home, memories, and the people who remained far away. These experiences gradually formed the emotional foundation of the album.<br><br>
+The songs move through reflections on love, absence, and memory, often framed by travel, unfamiliar cities, and late-night moments of introspection. Rather than searching for clear answers, the album allows uncertainty to remain present, mirroring the way certain feelings tend to return when something meaningful is left unresolved.<br>Several of the tracks revisit similar emotions from different angles. This repetition reflects the natural cycle of thought and memory, where certain moments and people continue to surface long after they have passed. In this way, the album builds its narrative gradually rather than presenting a single, direct conclusion.<br><br>
+Musically, Not That Far Away leans toward intimacy and atmosphere. Acoustic foundations, subtle textures, and slow-building arrangements create space for reflection, while occasional moments of intensity emerge as emotional peaks within the record. The overall sound remains restrained, allowing the atmosphere of the songs to unfold naturally.<br></p>
+        <br>
+      </div>
+      <div class="modal-right">
+        <p><b>RADIO RAPEŠ</b><br>
+          <b>DATE:</b> 10 MARCH 2026<br>
+          <b>TIME:</b> 3PM - 4PM (CET)</p>
+        <p><br>
+During the Rádio Rapeš broadcast, Midheaven spoke about the creative process behind the album, the experiences that influenced its themes, and the journey of turning personal moments into music. The program also included several songs from Not That Far Away, giving listeners insight into the sound and character of the record.<br><br>
+The entire show was recorded and will be uploaded later so listeners who were unable to tune in live will still be able to hear the conversation and the music. The recording will allow the broadcast to remain available beyond the live airing and offer another opportunity to explore the story behind Not That Far Away. <br>
+          <br>
+          <br>
+          <b>https://www.rapes.sk<br>
+          rapes@rapes.sk<br>
+          [+421] 950 524 452</b><br>
+          <br>
+          <b>Rádio Rapeš<br>
+          Hlinská, blox X<br>
+          010 54, Žilina</b><br>
+        </p>
+      </div>
+      <img src="img/Live/Radio-Back.jpg" alt="Radio show poster"> </div>
+  </div>
+</div>
 </body>
+<script>
+  const modal = document.getElementById("eventModal");
+  const closeBtn = modal.querySelector(".close");
+
+  document.querySelectorAll(".tickets").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      if (btn.textContent.trim() === "INFO") {
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden"; // prevent scrolling
+      }
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  });
+
+  window.addEventListener("click", e => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
+</script>
 </html>

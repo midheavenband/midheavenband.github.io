@@ -123,3 +123,5 @@ slider.addEventListener('touchmove', (e) => {
 });
 
 
+
+
