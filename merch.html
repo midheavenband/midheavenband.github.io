@@ -69,11 +69,13 @@
         <div class="product-info">
           <h1>MIDHEAVEN'S MERCH<br>
             – T-SHIRT</h1>
-          <p class="price">$12.99</p>
+          <p class="price">$9.99</p>
           <hr>
           <div class="order-bar">
             <div class="count">XL</div>
+            <a href="#" class="order-popup">
             <div class="order">ORDER</div>
+            </a>
           </div>
           <div class="about-order">
             <p> Official Midheaven's T-Shirt merch. T-shirt consists of a original drawing from the first homemade t-shirt made for Jakub on his 20th birthday and a official Midheaven's logo.<br>
@@ -91,7 +93,7 @@
         <div class="related-grid"> <a href="store-ntfa.html" class="related-item"> <img src="img/shop/ntfa.jpg" alt="NTFA Shirt">
           <p>NOT THAT FAR AWAY <br>
             - LIMITED EDITION CD</p>
-          <span>$19.99</span> </a> <a href="ntfa-shirt.html" class="related-item"> <img src="img/shop/ntfa-black-shirt.jpg" alt="NTFA Vinyl">
+          <span>$14,99</span> </a> <a href="ntfa-shirt.html" class="related-item"> <img src="img/shop/ntfa-black-shirt.jpg" alt="NTFA Vinyl">
           <p>NOT THAT FAR AWAY<br>
             — LIMITED EDITION CD / T-SHIRT</p>
           <span>$24.99</span> </a>
@@ -134,5 +136,73 @@
       The band is also known as Stredneba. </p>
   </section>
 </footer>
+	<div id="eventModal" class="modal">
+  <div class="modal-content-order"> <span class="close">&times;</span>
+    <h1>NOT THAT FAR AWAY <br>- LIMITED EDITION CD</h1>
+    <div class="modal-body">
+      <div class="modal-left">
+        <div class="checkout-section">
+          <h3>Manual Order — Direct Support Edition</h3>
+          <p class="bank-info-text"> To create your order, please send a <b>bank transfer using the details below.</b> </p>
+          <div class="bank-box">
+            <p><strong>Account name:</strong> Jakub Hudaček</p>
+            <p><strong>IBAN:</strong> SK61 1100 0000 0029 3832 9711</p>
+            <p><strong>Amount:</strong> $9,99 (Shipping = 1$)</p>
+            <p><strong>Reference:</strong> MERCH + Your Full Name</p>
+          </div>
+          <hr>
+          <h3>After Payment</h3>
+          <p class="bank-info-text">To complete your order, please email us a <b>screenshot together with your shipping details. </b> </p>
+          <div class="bank-box">
+            <p>Example:</p>
+            <br>
+            <p><strong>Subject - Merch (Black or White)</strong></p>
+            <br>
+            <p><strong>Full Name</strong></p>
+            <p><strong>Adress</strong></p>
+            <p><strong>Postal Code, City</strong></p>
+            <p><strong>Country</strong></p>
+            <br>
+            <p><strong>Screenshot - Receipt</strong></p>
+          </div>
+			
+        </div>
+		      <nav>
+				<div class="arrow"><a>▼</a></div></nav> <br>
+        <div class="order-policy">
+			
+          <p class="order-info-text"> Please note that due to the custom manufacturing process of our products, some orders may be delayed by up to 10 business days. We will do our best to process and ship your order as quickly as possible. </p>
+          <p class="order-info-text"> If you are not satisfied with your order, we offer full refunds within 30 days of receiving your purchase.<br>
+            <br>
+            If you encounter any issues, please don't hesitate to reach out to us at <strong>midheavenoff@gmail.com</strong>. </p>
+        </div>
+      </div>
+      <a href="mailto:midheavenoff@gmail.com" class="email-btn"><b>AFTER PAYING E-MAIL  EVERYTHING HERE</b> </a> </div>
+  </div>
+</div>
 </body>
+	<script>
+  const modal = document.getElementById("eventModal");
+const closeBtn = modal.querySelector(".close");
+
+document.querySelectorAll(".order-popup").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden";
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("open");
+  document.body.style.overflow = "auto";
+});
+
+window.addEventListener("click", e => {
+  if (e.target === modal) {
+    modal.classList.remove("open");
+    document.body.style.overflow = "auto";
+  }
+});
+</script>
 </html>

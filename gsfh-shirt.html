@@ -75,11 +75,13 @@
         <div class="product-info">
           <h1>GLORIES STREAMING FROM HEAVEN<br>
             – LIMITED EDITION CD AND WHITE T-SHIRT</h1>
-          <p class="price">$10.99</p>
+          <p class="price">$18,99</p>
           <hr>
           <div class="order-bar">
             <div class="count">1</div>
+            <a href="#" class="order-popup">
             <div class="order">ORDER</div>
+            </a>
           </div>
           <div class="about-order">
             <p> Glories Streaming from Heaven is a debut EP by Midheaven. Written, composed and recorded in November 2025. Produced by the artists themselves, the EP contains 3 tracks which were released December 16th 2025.<br>
@@ -97,7 +99,7 @@
               05 - At Least Not Today (Instrumental)<br>
               06 - Without a Rose (Instrumental)<br>
 				   <br>
-			  Audio details: <br><br>- WAWE<br> - 16-bit <br>- 44.1 kHz<br> - Interleaved<br> - POW-r #2 (Noise Shaping)
+			  Audio details: <br><br>- WAW<br> - 16-bit <br>- 44.1 kHz<br> - Interleaved<br> - POW-r #2 (Noise Shaping)
 				<br>
 					<br>
 				Official Midheaven's T-Shirt merch. T-shirt consists of a original drawing from the first homemade t-shirt made for Jakub on his 20th birthday and a official Midheaven's logo.
@@ -114,10 +116,10 @@ Please note due to the custom manufacture process, each t-shirt is unique and ma
         <div class="related-grid"> <a href="store-glories.html" class="related-item"> <img src="img/shop/glories.jpg" alt="EP - Glories Streaming from Heaven">
           <p>GLORIES STREAMING FROM HEAVEN <br>
             - LIMITED EDITION CD</p>
-          <span>$19.99</span> </a> <a href="merch.html" class="related-item"> <img src="img/shop/Shirts.jpg" alt="Merch - T-Shirt (Black and White)">
+          <span>$8,99</span> </a> <a href="merch.html" class="related-item"> <img src="img/shop/Shirts.jpg" alt="Merch - T-Shirt (Black and White)">
           <p>MIDHEAVEN'S MERCH<br>
             — LIMITED EDITION T-SHIRT</p>
-          <span>$12.99</span> </a> </div>
+          <span>$9,99</span> </a> </div>
       </section>
     </div>
   </div>
@@ -151,5 +153,73 @@ Please note due to the custom manufacture process, each t-shirt is unique and ma
       The band is also known as Stredneba. </p>
   </section>
 </footer>
+	<div id="eventModal" class="modal">
+  <div class="modal-content-order"> <span class="close">&times;</span>
+    <h1>NOT THAT FAR AWAY <br>- LIMITED EDITION CD</h1>
+    <div class="modal-body">
+      <div class="modal-left">
+        <div class="checkout-section">
+          <h3>Manual Order — Direct Support Edition</h3>
+          <p class="bank-info-text"> To create your order, please send a <b>bank transfer using the details below.</b> </p>
+          <div class="bank-box">
+            <p><strong>Account name:</strong> Jakub Hudaček</p>
+            <p><strong>IBAN:</strong> SK61 1100 0000 0029 3832 9711</p>
+            <p><strong>Amount:</strong> $19.99 (Shipping = 1$)</p>
+            <p><strong>Reference:</strong> GSTFH, T-Shirt + Your Full Name</p>
+          </div>
+          <hr>
+          <h3>After Payment</h3>
+          <p class="bank-info-text">To complete your order, please email us a <b>screenshot together with your shipping details. </b> </p>
+          <div class="bank-box">
+            <p>Example:</p>
+            <br>
+            <p><strong>Subject - Not That Far Away, CD / T-Shirt</strong></p>
+            <br>
+            <p><strong>Full Name</strong></p>
+            <p><strong>Adress</strong></p>
+            <p><strong>Postal Code, City</strong></p>
+            <p><strong>Country</strong></p>
+            <br>
+            <p><strong>Screenshot - Receipt</strong></p>
+          </div>
+			
+        </div>
+		      <nav>
+				<div class="arrow"><a>▼</a></div></nav> <br>
+        <div class="order-policy">
+			
+          <p class="order-info-text"> Please note that due to the custom manufacturing process of our products, some orders may be delayed by up to 10 business days. We will do our best to process and ship your order as quickly as possible. </p>
+          <p class="order-info-text"> If you are not satisfied with your order, we offer full refunds within 30 days of receiving your purchase.<br>
+            <br>
+            If you encounter any issues, please don't hesitate to reach out to us at <strong>midheavenoff@gmail.com</strong>. </p>
+        </div>
+      </div>
+      <a href="mailto:midheavenoff@gmail.com" class="email-btn"><b>AFTER PAYING E-MAIL  EVERYTHING HERE</b> </a> </div>
+  </div>
+</div>
 </body>
+	<script>
+  const modal = document.getElementById("eventModal");
+const closeBtn = modal.querySelector(".close");
+
+document.querySelectorAll(".order-popup").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden";
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("open");
+  document.body.style.overflow = "auto";
+});
+
+window.addEventListener("click", e => {
+  if (e.target === modal) {
+    modal.classList.remove("open");
+    document.body.style.overflow = "auto";
+  }
+});
+</script>
 </html>

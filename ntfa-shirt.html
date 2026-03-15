@@ -106,13 +106,14 @@
           <h1>NOT THAT FAR AWAY<br>
             – LIMITED EDITION CD <br>
             WITH BLACK T-SHIRT</h1>
-          <p class="price">$15.99</p>
+          <p class="price">$24,99</p>
           <hr>
-          <div class="order-bar">
+         <div class="order-bar">
             <div class="count">1</div>
-            <a href="checkout.html">
+             <a href="#" class="order-popup">
             <div class="order">ORDER</div>
-            </a> </div>
+            </a>
+          </div>
           <div class="about-order">
             <p> Not That Far Away is a debut album by Midheaven. Written and composed in Austria. Recorded and produced by the artists themselves, the album contains 8 tracks which were released February 5th 2026.<br>
               <br>
@@ -140,7 +141,7 @@
               <br>
               Audio details: <br>
               <br>
-              - WAWE<br>
+              - WAW<br>
               - 16-bit <br>
               - 44.1 kHz<br>
               - Interleaved<br>
@@ -159,10 +160,10 @@
         <div class="related-grid"> <a href="store-ntfa.html" class="related-item"> <img src="img/shop/ntfa.jpg" alt="Album - Not That Far Away">
           <p>NOT THAT FAR AWAY<br>
             - LIMITED EDITION CD</p>
-          <span>$19.99</span> </a> <a href="merch.html" class="related-item"> <img src="img/shop/Shirts.jpg" alt="Merch - T-Shirt (Black and White)">
+          <span>$14,99</span> </a> <a href="merch.html" class="related-item"> <img src="img/shop/Shirts.jpg" alt="Merch - T-Shirt (Black and White)">
           <p>MIDHEAVEN'S MERCH<br>
             — LIMITED EDITION T-SHIRT</p>
-          <span>$12.99</span> </a> </div>
+          <span>$9,99</span> </a> </div>
       </section>
     </div>
   </div>
@@ -195,5 +196,73 @@
       The band is also known as Stredneba. </p>
   </section>
 </footer>
+	<div id="eventModal" class="modal">
+  <div class="modal-content-order"> <span class="close">&times;</span>
+    <h1>NOT THAT FAR AWAY <br>- LIMITED EDITION CD WITH BLACK T-SHIRT</h1>
+    <div class="modal-body" >
+      <div class="modal-left">
+        <div class="checkout-section">
+          <h3>Manual Order — Direct Support Edition</h3>
+          <p class="bank-info-text"> To create your order, please send a <b>bank transfer using the details below.</b> </p>
+          <div class="bank-box">
+            <p><strong>Account name:</strong> Jakub Hudaček</p>
+            <p><strong>IBAN:</strong> SK61 1100 0000 0029 3832 9711</p>
+            <p><strong>Amount:</strong> $25.99 (Shipping = 1$)</p>
+            <p><strong>Reference:</strong> NTFA, T-Shirt + Your Full Name</p>
+          </div>
+          <hr>
+          <h3>After Payment</h3>
+          <p class="bank-info-text">To complete your order, please email us a <b>screenshot together with your shipping details. </b> </p>
+          <div class="bank-box">
+            <p>Example:</p>
+            <br>
+            <p><strong>Subject - Not That Far Away, CD / T-Shirt</strong></p>
+            <br>
+            <p><strong>Full Name</strong></p>
+            <p><strong>Adress</strong></p>
+            <p><strong>Postal Code, City</strong></p>
+            <p><strong>Country</strong></p>
+            <br>
+            <p><strong>Screenshot - Receipt</strong></p>
+          </div>
+			
+        </div>
+		      <nav>
+				<div class="arrow"><a>▼</a></div></nav> <br>
+        <div class="order-policy">
+			
+          <p class="order-info-text"> Please note that due to the custom manufacturing process of our products, some orders may be delayed by up to 10 business days. We will do our best to process and ship your order as quickly as possible. </p>
+          <p class="order-info-text"> If you are not satisfied with your order, we offer full refunds within 30 days of receiving your purchase.<br>
+            <br>
+            If you encounter any issues, please don't hesitate to reach out to us at <strong>midheavenoff@gmail.com</strong>. </p>
+        </div>
+      </div>
+      <a href="mailto:midheavenoff@gmail.com" class="email-btn"><b>AFTER PAYING E-MAIL  EVERYTHING HERE</b> </a> </div>
+  </div>
+</div>
 </body>
+	<script>
+  const modal = document.getElementById("eventModal");
+const closeBtn = modal.querySelector(".close");
+
+document.querySelectorAll(".order-popup").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden";
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("open");
+  document.body.style.overflow = "auto";
+});
+
+window.addEventListener("click", e => {
+  if (e.target === modal) {
+    modal.classList.remove("open");
+    document.body.style.overflow = "auto";
+  }
+});
+</script>
 </html>
