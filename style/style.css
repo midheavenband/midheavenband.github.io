@@ -1358,6 +1358,16 @@ body.fade-out {
 	     flex-direction: column-reverse;
   }
 	
+	.modal-left {
+  flex: 1;
+  max-width: 450px;
+}
+	
+	.email-btn{
+		  flex: 1;
+  max-width: 50%;
+	}
+	
 	 .order-summary {
     max-width: 100%;
   }
