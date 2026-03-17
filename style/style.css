@@ -9,15 +9,13 @@ font-family: Helvetica, "Helvetica Neue";
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+	letter-spacing: -0.65px;
 }
 .page-content {
   flex: 1;
 }
 
-::selection{
-	background-color: black;
-	color: white;
-}
+
 
 #pageWrap {
   flex: 1;
@@ -359,6 +357,27 @@ nav a {
 .product-info h1 {
   font-size: 28px;
   margin: 0 0 10px 0;
+}
+
+.product-img {
+  position: relative;
+  display: block;
+}
+
+.product-img img {
+  width: 100%;
+  display: block;
+}
+
+.img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.product-img:hover .img-hover {
+  opacity: 1;
 }
 .price {
   font-size: 16px;
