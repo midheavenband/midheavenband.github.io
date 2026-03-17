@@ -843,17 +843,18 @@ nav a {
   inset: 0;
   z-index: 5000;
 
-  display: flex;
-  align-items: center;
+  display: none;
+
   justify-content: center;
+
+  /* 🔥 CHANGE THIS */
+  align-items: flex-start;
 
   background: rgba(255,255,255,0.3);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 
-  padding: 20px;
-  
-  /* 🔥 IMPORTANT FIX */
+  padding: 40px 20px 20px; /* extra top space */
   overflow-y: auto;
 }
 
@@ -876,7 +877,7 @@ nav a {
 
   width: 100%;
   max-width: 500px;
-
+ max-height: none; /* 🔥 remove the restriction */
   padding: 30px;
  
   position: relative;
