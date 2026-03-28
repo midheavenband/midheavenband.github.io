@@ -29,6 +29,7 @@ const menuBlur = document.getElementById("menuBlur");
 menuToggle.addEventListener("click", () => {
   sideMenu.classList.toggle("open");
   menuBlur.classList.toggle("active");
+	menuToggle.classList.toggle("active");
 });
 
 
