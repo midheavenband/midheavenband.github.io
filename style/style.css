@@ -1396,3 +1396,7 @@ body.fade-out {
     max-height: 90vh;
     overflow-y: auto;
   }
+	
+	.watch h1{
+	font-size: 20px;
+	}
