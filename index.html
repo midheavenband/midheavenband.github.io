@@ -20,25 +20,33 @@
     },
 
     {
-      "@type": "MusicGroup",
+      "@type": ["MusicGroup", "Organization"],
       "@id": "https://midheavenband.github.io/website/#midheaven",
       "name": "Midheaven",
       "alternateName": "Stredneba",
-      "description": "Midheaven is a Slovak alternative rock band formed in 2021.",
+      "description": "Midheaven is a Slovak alternative band formed in 2021, known for atmospheric and emotionally driven alternative rock.",
       "genre": [
         "Alternative Rock",
         "Indie Rock"
       ],
       "foundingDate": "2021",
       "foundingLocation": {
-        "@type": "Place",
+        "@type": "Country",
         "name": "Slovakia"
       },
       "url": "https://midheavenband.github.io/website/",
       "image": "https://midheavenband.github.io/website/img/midheaven-band.jpg",
+
+      "member": [
+        { "@id": "https://midheavenband.github.io/website/#jakub" },
+        { "@id": "https://midheavenband.github.io/website/#matej" },
+        { "@id": "https://midheavenband.github.io/website/#julian" },
+        { "@id": "https://midheavenband.github.io/website/#rado" }
+      ],
+
       "sameAs": [
         "https://musicbrainz.org/artist/9c9b52f1-c494-426c-87ec-4880c5a703e7",
-		"https://www.discogs.com/artist/17235121-Midheaven-Slovak-Band?srsltid=AfmBOor_6cruOttiugrX-HcqZNO7ayDgeRgMW8VUhVpWvMLLUiHOEkS5",
+        "https://www.discogs.com/artist/17235121-Midheaven-Slovak-Band",
         "https://open.spotify.com/artist/6Te53HLoQ36xAQXbsVsa5I",
         "https://music.apple.com/artist/1727784966",
         "https://midheaventheband.bandcamp.com",
@@ -47,12 +55,6 @@
         "https://twitter.com/Midheaven030623",
         "https://www.facebook.com/profile.php?id=61583867211752",
         "https://www.tiktok.com/@midheavenoff"
-	
-      ],
-      "member": [
-        { "@id": "https://midheavenband.github.io/website/#jakub" },
-        { "@id": "https://midheavenband.github.io/website/#matej" },
-        { "@id": "https://midheavenband.github.io/website/#julian" }
       ]
     },
 
@@ -81,6 +83,16 @@
       "@id": "https://midheavenband.github.io/website/#julian",
       "name": "Julián Jurčík",
       "jobTitle": "Bass, Percussion",
+      "memberOf": {
+        "@id": "https://midheavenband.github.io/website/#midheaven"
+      }
+    },
+
+    {
+      "@type": "Person",
+      "@id": "https://midheavenband.github.io/website/#rado",
+      "name": "Radoslav Černický",
+      "jobTitle": "Guitar, Producer",
       "memberOf": {
         "@id": "https://midheavenband.github.io/website/#midheaven"
       }
