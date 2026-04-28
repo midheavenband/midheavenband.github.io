@@ -4,12 +4,11 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100%;
-  font-family: Helvetica, "Helvetica Neue";
+  font-family: Gotham, Arial, "sans-serif", Helvetica, "Helvetica Bold", "Helvetica Light";
   overflow-x: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  letter-spacing: -0.65px;
 }
 .page-content {
   flex: 1;
@@ -164,7 +163,7 @@ nav {
   justify-content: center;
 }
 .nav-item img {
-  width: 250px;
+  width: 100%;
 }
 nav a img {
   position: relative;
@@ -240,7 +239,7 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../img/Live/Stairs-live.jpg");
+  background-image: url("../img/place-out.jpg");
   background-size: cover;
   object-fit: cover;
   text-align: center;
@@ -321,7 +320,6 @@ nav a {
   transition: 0.2s ease;
 }
 .items {
-  margin-top: 4%;
   display: flex; /* row layout for desktop */
   flex-wrap: wrap; /* allow wrapping on smaller screens */
   justify-content: center; /* center items */
@@ -338,7 +336,7 @@ nav a {
   box-sizing: border-box;
 }
 .saleitems img {
-  width: 100%;
+  width: 600px;
   height: auto;
   object-fit: cover;
   margin-bottom: 10px;
@@ -364,7 +362,7 @@ nav a {
   border-radius: 30px;
 }
 .product {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 100px auto;
   display: grid;
   grid-template-columns: 450px 1fr;
@@ -647,7 +645,7 @@ nav a {
 .about-order p {
   font-size: 14px;
   line-height: 1.6;
-  max-width: 420px;
+  max-width: 500px;
 }
 .contact-info {
   max-height: 0;
