@@ -176,6 +176,7 @@
 }
 </script>
 <style>
+/* FADE IN EFFECT */
 body {
 	opacity: 0;
 	animation: fadeIn 1.5s ease forwards;
@@ -219,6 +220,7 @@ body {
 	border-radius: 20px;
 	max-width: 400px;
 	width: 90%;
+	box-shadow: 0 40px 40px rgba(0,0,0,0.1);
 }
 /* Smooth animation for the whole bar */
 .platform-link {
@@ -239,6 +241,7 @@ body {
 }
 .platform-link:hover {
 	background-color: white;
+	filter: drop-shadow(1px 1px 1px #D5D5D5);
 	transition: 1s;
 	transform: scale(1.03);
 }
@@ -273,16 +276,23 @@ body {
 }
 .Logo img {
 	transition: transform 1s;
-	height: 125px;
+	height: 250px;
 }
 .Logo img:hover {
 	transform: scale(1.1);
+}
+.aboutlink {
+	color: black;
+	border-radius: 5px;
+	border-color: whitesmoke;
+	text-decoration: none;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 }
 </style>
 </head>
 <body>
 <div class="listen-box">
-  <div class="Logo"> <a href="index.html"><img src="img/album/front_0000_Not That Far Away.jpg" alt="Not That Far Away"></a>
+  <div class="Logo"> <a href="index.html"><img src="img/album-record.jpg" alt="Not That Far Away"></a>
     <h4>Not That Far Away</h4>
     <p></p>
   </div>
