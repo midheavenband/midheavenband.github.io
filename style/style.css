@@ -677,7 +677,7 @@ nav a {
     text-align: center;
   }
   .article-content {
-	  max-width: 400px;
+	  max-width: 350px;
     text-align: left;
   }
   .article-image img {
@@ -2718,14 +2718,16 @@ body.fade-out {
       font-size: 20px;
     }
     .nav-item {
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: center; /* centers the whole block */
       margin-top: 5%;
     }
     /* Shared width wrapper behavior */
     .nav-item img, .nav-text {
+
+		
       width: 100%;
-      max-width: 500px; /* ← SAME VALUE for both */
+      max-width: 350px; /* ← SAME VALUE for both */
     }
     .nav-text {
       text-align: left; /* aligns text to image edge */
