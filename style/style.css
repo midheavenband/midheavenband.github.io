@@ -88,9 +88,7 @@ html, body {
   width: 100%;
   height: 100%;
   padding-left: 4%;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+ background-color: white;
   gap: 0;
   display: flex;
   flex-direction: column;
@@ -175,8 +173,9 @@ nav {
 /* RIGHT SIDE */
 .nav-item img {
   flex: 1;
-  max-width: 880px;
+  max-width: 800px;
   width: 100%;
+justify-content: center;
 }
 .nav-text {
   text-align: left;
@@ -229,6 +228,7 @@ nav a {
   transform-origin: center bottom;
   filter: blur(0px);
   transition: transform 0.3s ease, filter 0.3s ease;
+	margin: 0 auto;
 }
 #head.move-up {
   animation: headMoveUp 0.8s forwards;
@@ -994,9 +994,7 @@ body.fade-out {
   opacity: 0.8;
   transition: opacity 0.2s ease;
 }
-.footer-col a:hover {
-  opacity: 1;
-}
+
 .footer-bottom {
   border-top: 1px solid hsla(0, 0%, 84%, 1.00);
   padding-top: 35px;
@@ -1015,9 +1013,7 @@ body.fade-out {
   color: black;
   opacity: 0.7;
 }
-.footer-legal a:hover {
-  opacity: 1;
-}
+
 .interview {
   width: 100%;
 }
@@ -2451,7 +2447,7 @@ body.fade-out {
     margin: 20px;
   }
   #logoBtn, #head {
-
+width: 900px;
   }
   #head:hover, nav a:hover {
     transform: none;
@@ -2657,19 +2653,17 @@ body.fade-out {
 	  .nav-item {
     flex-direction: column-reverse;
     align-items: center; /* centers the whole block */
+		  	  margin-top: 5%;
   }
 
   /* Shared width wrapper behavior */
   .nav-item img,
   .nav-text {
+
     width: 100%;
-    max-width: 800px; /* ← SAME VALUE for both */
+    max-width: 600px; /* ← SAME VALUE for both */
   }
 
-  .nav-item img {
-    display: block;
-    margin: 0 auto;
-  }
 
   .nav-text {
     text-align: left; /* aligns text to image edge */
