@@ -619,7 +619,6 @@ nav a {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 80px 20px;
 }
 .article-card {
   display: flex;
@@ -677,12 +676,11 @@ nav a {
     text-align: center;
   }
   .article-content {
-	  max-width: 350px;
+	  width: 300px;
     text-align: left;
   }
   .article-image img {
     width: 100%;
-    width: 600px;
   }
   .checkout-wrapper {
     display: flex;
