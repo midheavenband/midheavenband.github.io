@@ -654,7 +654,6 @@ nav a {
 .article-content p {
   font-size: 16px;
   opacity: 0.8;
-  margin-bottom: 20px;
   max-width: 500px;
 }
 /* LINKS */
@@ -685,6 +684,7 @@ nav a {
   }
   .article-image img {
     width: 100%;
+	  margin-bottom: -60px;
   }
   .article-links {
     justify-content: center;
@@ -2644,8 +2644,13 @@ body.fade-out {
       overflow-y: auto;
     }
     .watch h1 {
-      font-size: 20px;
+      font-size: 15px;
     }
+	  
+	  .watch-buttons{
+		width: 70%;  
+	  }
+	  
     .nav-item {
       flex-direction: column;
       align-items: center; /* centers the whole block */
@@ -2654,7 +2659,7 @@ body.fade-out {
     /* Shared width wrapper behavior */
     .nav-item img, .nav-text {
       width: 100%;
-      max-width: 400px; /* ← SAME VALUE for both */
+      max-width: 350px; /* ← SAME VALUE for both */
     }
     .nav-text {
       text-align: left; /* aligns text to image edge */
