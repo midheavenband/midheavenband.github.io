@@ -16,6 +16,11 @@ html, body {
 .page-content {
   flex: 1;
 }
+a:hover{
+	opacity: 0.9;
+	transition: 0.3s ease;
+	transform: scale(1.01);
+}
 #pageWrap {
   flex: 1;
   display: flex;
@@ -74,9 +79,6 @@ html, body {
   display: flex;
   flex-direction: column;
 }
-.hamburger:hover {
-  opacity: 50%;
-}
 .hamburger span {
   width: 28px;
   height: 2px;
@@ -104,12 +106,10 @@ html, body {
 }
 .side-menu a {
   font-size: 50px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400; /* or 400 depending on your system */
   letter-spacing: 0.03em; /* try between 0.03em–0.08em */
-  line-height: 1.1;
   text-transform: uppercase;
-  line-height: 1.05; /* sentence-like */
+  line-height: 0.5; /* sentence-like */
   color: black;
   text-decoration: none;
   transition: opacity 0.3s ease;
@@ -146,10 +146,7 @@ html, body {
   border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-#linksPanel a:hover {
-  color: grey;
-  transition: 0.5s;
-} /* ----------------------------------------- */ /* NAVIGATION */ /* ----------------------------------------- */ nav {
+nav {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -167,14 +164,13 @@ nav {
   display: flex;
   justify-content: space-between; /* pushes text left, image right */
   align-items: flex-start;
-  width: 100%;
-  max-width: 1800px; /* optional, keeps it clean */
+  width: 40%;
   margin: 0 auto;
 }
 /* RIGHT SIDE */
 .nav-item img {
   flex: 1;
-  max-width: 800px;
+  max-width: 1500px;
   width: 100%;
   justify-content: center;
 }
@@ -184,7 +180,7 @@ nav {
 }
 .nav-text h1 {
   text-align: left;
-  font-weight: 400;
+  font-weight: 500;
 }
 .nav-text a {
   justify-content: flex-start;
@@ -249,6 +245,21 @@ nav a {
 }
 .arrow img {
   width: 50px;
+}
+/* LINKS */
+.watch-buttons {
+  display: flex;
+  gap: 15px;
+}
+.watch-buttons a {
+  border-radius: 5px;
+  font-weight: 450;
+  width: 200px;
+  border: 1px solid white;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease;
 }
 .watchbox {
   width: 100%;
@@ -330,10 +341,6 @@ nav a {
   border-radius: 10px;
   transition: 0.3s ease;
 }
-.cta-buttons a:hover {
-  background-color: white;
-  color: black;
-}
 .listenicons {
   display: flex;
   justify-content: center;
@@ -363,18 +370,20 @@ nav a {
   align-items: center;
   text-align: center;
   box-sizing: border-box;
+	
 }
 .saleitems img {
   width: 600px;
   height: auto;
   object-fit: cover;
-  margin-bottom: 10px;
+
 }
 .saleitems p {
-  margin: 5px 0;
+  margin: 20px 0;
   font-size: 14px;
 }
 .saleitems a {
+	margin: 20px;
   text-decoration: none;
   color: black;
   font-weight: 400;
@@ -611,9 +620,6 @@ nav a {
 .order-info-text strong {
   font-weight: bold;
 }
-/* =========================
-   ARTICLE SECTION
-========================= */
 .article-section {
   margin-top: 5%;
   width: 100%;
@@ -622,29 +628,24 @@ nav a {
 }
 .article-card {
   display: flex;
-  max-width: 1700px;
+  max-width: 1500px;
   width: 100%;
   gap: 100px;
   align-items: center;
 }
-/* LEFT */
 .article-image img {
   width: 800px;
   max-width: 100%;
   display: block;
-	border-radius: 20px;
+  border-radius: 20px;
 }
 /* RIGHT */
 .article-content {
   text-align: left;
 }
-.article-content a{
-	color: black;
-	text-decoration: none;
-}
-.article-content a:hover{
-	color: black;
-	text-decoration: underline;
+.article-content a {
+  color: black;
+  text-decoration: none;
 }
 .article-content h2 {
   font-size: 28px;
@@ -662,25 +663,36 @@ nav a {
   gap: 15px;
 }
 .article-links a {
-  border-radius: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-weight: 400;
   border: 1px solid;
   padding: 20px;
   text-decoration: none;
   color: black;
   transition: 0.3s ease;
+  width: 20%;
+  text-align: center;
 }
-
 @media (max-width: 768px) {
   .article-card {
     flex-direction: column;
     text-align: center;
   }
   .article-content {
-	  width: 300px;
+    width: 300px;
     text-align: left;
   }
   .article-image img {
     width: 100%;
+  }
+  .article-links {
+    justify-content: center;
+  }
+  .article-links a {
+	  font-size: 13px;
+    width: 300px;
+    text-align: center;
   }
   .checkout-wrapper {
     display: flex;
@@ -1036,8 +1048,11 @@ body.fade-out {
   margin-bottom: 10%;
 }
 .site-footer {
-  background-color: white;
-  color: black;
+	justify-content: center;
+	text-transform: uppercase;
+	font-weight: 500;
+  background-color: hsla(0,0%,5%,1.00);
+  color: white;
   padding: 80px 60px 30px;
   font-size: 14px;
 }
@@ -1056,21 +1071,21 @@ body.fade-out {
 .footer-col h4 {
   font-size: 14px;
   letter-spacing: 1px;
-  margin-bottom: 20px;
+	 color: white;
 }
 .footer-col a {
   text-decoration: none;
-  color: black;
   transition: opacity 0.2s ease;
+	 color: white;
 }
 .footer-bottom {
-  border-top: 1px solid hsla(0, 0%, 84%, 1.00);
   padding-top: 35px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
+	 color: white;
 }
 .footer-legal {
   display: flex;
@@ -1078,7 +1093,7 @@ body.fade-out {
 }
 .footer-legal a {
   text-decoration: none;
-  color: black;
+	 color: white;
 }
 .interview {
   width: 100%;
@@ -1186,9 +1201,6 @@ body.fade-out {
   }
   #logoBtn, #head {
     width: 250px;
-  }
-  #head:hover, nav a:hover {
-    transform: none;
   }
   .container {
     flex: 1;
@@ -1463,9 +1475,6 @@ body.fade-out {
     display: flex;
     flex-direction: column;
   }
-  .hamburger:hover {
-    opacity: 50%;
-  }
   .hamburger span {
     width: 28px;
     height: 2px;
@@ -1478,9 +1487,7 @@ body.fade-out {
     width: 100%;
     height: 100%;
     padding-left: 4%;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: white;
     gap: 0;
     display: flex;
     flex-direction: column;
@@ -1500,7 +1507,7 @@ body.fade-out {
     letter-spacing: 0.03em; /* try between 0.03em–0.08em */
     line-height: 1.1;
     text-transform: uppercase;
-    line-height: 1.05; /* sentence-like */
+    line-height: 0.03; /* sentence-like */
     color: black;
     text-decoration: none;
     transition: opacity 0.3s ease;
@@ -1537,10 +1544,7 @@ body.fade-out {
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
-  #linksPanel a:hover {
-    color: grey;
-    transition: 0.5s;
-  } /* ----------------------------------------- */ /* NAVIGATION */ /* ----------------------------------------- */ nav {
+  nav {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1559,28 +1563,14 @@ body.fade-out {
     justify-content: space-between; /* pushes text left, image right */
     align-items: flex-start;
     width: 100%;
-    max-width: 1850px; /* optional, keeps it clean */
+    max-width: 1200px; /* optional, keeps it clean */
     margin: 0 auto;
   }
   /* RIGHT SIDE */
   .nav-item img {
     flex: 1;
-    max-width: 880px;
+    max-width: 600px;
     width: 100%;
-  }
-  .nav-text {
-
-  }
-  .nav-text h1 {
-    text-align: left;
-    font-weight: 800;
-  }
-  .nav-text a {
-    justify-content: flex-start;
-    display: flex;
-    text-align: left;
-    color: black;
-    font-size: 50px;
   }
   nav a img {
     position: relative;
@@ -1717,10 +1707,6 @@ body.fade-out {
     border: 1px solid white;
     border-radius: 10px;
     transition: 0.3s ease;
-  }
-  .cta-buttons a:hover {
-    background-color: white;
-    color: black;
   }
   .listenicons {
     display: flex;
@@ -2354,59 +2340,7 @@ body.fade-out {
   .video {
     margin-bottom: 10%;
   }
-  .site-footer {
-    background-color: white;
-    color: black;
-    padding: 80px 60px 30px;
-    font-size: 14px;
-  }
-  .footer-inner {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 80px;
-    max-width: 1200px;
-    margin: 0 auto 60px;
-  }
-  .footer-col {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .footer-col h4 {
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-  }
-  .footer-col a {
-    text-decoration: none;
-    color: black;
-    opacity: 0.8;
-    transition: opacity 0.2s ease;
-  }
-  .footer-col a:hover {
-    opacity: 1;
-  }
-  .footer-bottom {
-    border-top: 1px solid hsla(0, 0%, 84%, 1.00);
-    padding-top: 35px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .footer-legal {
-    display: flex;
-    gap: 25px;
-  }
-  .footer-legal a {
-    text-decoration: none;
-    color: black;
-    opacity: 0.7;
-  }
-  .footer-legal a:hover {
-    opacity: 1;
-  }
+  
   .interview {
     width: 100%;
   }
@@ -2513,9 +2447,6 @@ body.fade-out {
     }
     #logoBtn, #head {
       width: 900px;
-    }
-    #head:hover, nav a:hover {
-      transform: none;
     }
     .container {
       flex: 1;
@@ -2718,14 +2649,12 @@ body.fade-out {
     .nav-item {
       flex-direction: column;
       align-items: center; /* centers the whole block */
-      margin-top: 5%;
+      margin-top: 15%;
     }
     /* Shared width wrapper behavior */
     .nav-item img, .nav-text {
-
-		
       width: 100%;
-      max-width: 350px; /* ← SAME VALUE for both */
+      max-width: 400px; /* ← SAME VALUE for both */
     }
     .nav-text {
       text-align: left; /* aligns text to image edge */
