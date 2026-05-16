@@ -160,10 +160,8 @@ nav {
 }
 .nav-item {
   display: flex;
-  justify-content: space-between; /* pushes text left, image right */
   align-items: flex-start;
   width: 40%;
-  margin: 0 auto;
 }
 /* RIGHT SIDE */
 .nav-item img {
@@ -239,10 +237,7 @@ nav a {
 }
 .arrow {
   padding: 6%;
-  font-size: 30px;
-}
-.arrow img {
-  width: 50px;
+  font-size: 100px;
 }
 /* LINKS */
 .watch-buttons {
@@ -254,7 +249,7 @@ nav a {
   font-weight: 450;
   width: 200px;
   border: 1px solid white;
-  padding: 20px;
+  padding: 10px;
   text-decoration: none;
   color: white;
   transition: 0.3s ease;
@@ -266,7 +261,7 @@ nav a {
   align-items: center;
   justify-content: center;
   background-image: url("../img/notthatfaraway.jpg");
-  background-size: cover;
+  background-size: contain;
   text-align: center;
 }
 .watchbox-2 {
@@ -1049,8 +1044,8 @@ body.fade-out {
 	justify-content: center;
 	text-transform: uppercase;
 	font-weight: 500;
-  background-color: hsla(0,0%,5%,1.00);
-  color: white;
+	background-color: white;
+  color: black;
   padding: 80px 60px 30px;
   font-size: 14px;
 }
@@ -1069,12 +1064,14 @@ body.fade-out {
 .footer-col h4 {
   font-size: 14px;
   letter-spacing: 1px;
-	 color: white;
+	 color: black;
+	opacity: 0.7;
 }
 .footer-col a {
   text-decoration: none;
   transition: opacity 0.2s ease;
-	 color: white;
+	 color: black;
+	opacity: 0.7;
 }
 .footer-bottom {
   padding-top: 35px;
@@ -1083,7 +1080,8 @@ body.fade-out {
   align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
-	 color: white;
+	 color: black;
+	opacity: 0.7;
 }
 .footer-legal {
   display: flex;
@@ -1091,7 +1089,8 @@ body.fade-out {
 }
 .footer-legal a {
   text-decoration: none;
-	 color: white;
+	 color: black;
+	opacity: 0.7;
 }
 .interview {
   width: 100%;
@@ -1619,13 +1618,13 @@ body.fade-out {
   #content img {
     height: 100%;
   }
-  .arrow {
-    padding: 6%;
-    font-size: 30px;
-  }
-  .arrow img {
-    width: 50px;
-  }
+.arrow {
+  padding: 6%;
+  font-size: 70px;
+	margin-bottom: 5%;
+}
+ 
+	
   .watchbox {
     width: 100%;
     min-height: 100vh;
