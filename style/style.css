@@ -4,20 +4,23 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100%;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400; /* or 400 depending on your system */
-  letter-spacing: -0.05em; /* try between 0.03em–0.08em */
+font-family: "neue-haas-grotesk-text", sans-serif;
+font-weight: 400;
+font-style: normal;
+	letter-spacing: -1px;
   line-height: 1.1;
   overflow-x: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
+
+
 .page-content {
   flex: 1;
 }
 a:hover{
-	transform: scale(1.01);
+	opacity: 0.8;
 }
 #pageWrap {
   flex: 1;
@@ -236,6 +239,8 @@ nav a {
   height: 100%;
 }
 .arrow {
+	margin-top: 5%; 
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
   padding: 6%;
   font-size: 100px;
 }
@@ -1618,11 +1623,7 @@ body.fade-out {
   #content img {
     height: 100%;
   }
-.arrow {
-  padding: 6%;
-  font-size: 70px;
-	margin-bottom: 5%;
-}
+
  
 	
   .watchbox {
