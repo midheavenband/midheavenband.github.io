@@ -1,0 +1,690 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	min-height: 100%;
+}
+
+body {
+	background: #fdfdfb;
+	color: #111;
+	overflow-x: hidden;
+}
+
+
+/* =========================================================
+   LANDING
+========================================================= */
+
+.landing {
+	width: 100vw;
+	min-height: 100vh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background: #fdfdfb;
+}
+
+.page {
+	position: relative;
+
+	width: min(100vw, 1500px);
+
+	aspect-ratio: 801 / 403;
+
+	overflow: hidden;
+
+	background: #fdfdfb;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+.serif {
+	font-family:
+		"Bodoni Moda",
+		"Bodoni 72",
+		"Didot",
+		"Times New Roman",
+		serif;
+
+	font-weight: 400;
+}
+
+.italic {
+	font-style: italic;
+}
+
+
+/* =========================================================
+   PAGE NUMBERS
+========================================================= */
+
+.page-number {
+	position: absolute;
+
+	top: 5.5%;
+
+	font-family:
+		Arial,
+		Helvetica,
+		sans-serif;
+
+	font-size: clamp(8px, 1vw, 12px);
+
+	font-weight: 400;
+
+	line-height: 1;
+
+	z-index: 20;
+}
+
+.page-number.left {
+	left: 3.4%;
+}
+
+.page-number.right {
+	right: 3.6%;
+}
+
+
+/* =========================================================
+   LEFT STATEMENT
+========================================================= */
+
+.statement-left {
+	position: absolute;
+
+	left: 3.5%;
+	top: 13.2%;
+
+	width: 43%;
+
+	z-index: 5;
+
+	font-family:
+		"Bodoni Moda",
+		"Bodoni 72",
+		"Didot",
+		"Times New Roman",
+		serif;
+
+	font-size: clamp(24px, 3.55vw, 55px);
+
+	line-height: 0.91;
+
+	letter-spacing: -0.055em;
+}
+
+.statement-left em {
+	font-style: italic;
+}
+
+
+/* =========================================================
+   STATUE
+========================================================= */
+
+.statue {
+	position: absolute;
+
+	left: 21.2%;
+	top: 4.2%;
+
+	width: 48%;
+
+	z-index: 4;
+
+	pointer-events: none;
+	user-select: none;
+}
+
+
+/* =========================================================
+   RIGHT STATEMENT
+========================================================= */
+
+.statement-right {
+	position: absolute;
+
+	right: 3.3%;
+	top: 58.5%;
+
+	width: 31%;
+
+	z-index: 7;
+
+	font-family:
+		"Bodoni Moda",
+		"Bodoni 72",
+		"Didot",
+		"Times New Roman",
+		serif;
+
+	font-size: clamp(23px, 3.45vw, 52px);
+
+	line-height: 0.94;
+
+	letter-spacing: -0.055em;
+
+	text-align: left;
+}
+
+.statement-right em {
+	font-style: italic;
+}
+
+
+/* =========================================================
+   SMALL NOTES
+========================================================= */
+
+.note {
+	position: absolute;
+
+	z-index: 9;
+
+	font-family:
+		Arial,
+		Helvetica,
+		sans-serif;
+
+	font-size: clamp(4px, 0.55vw, 8px);
+
+	line-height: 1.08;
+
+	letter-spacing: -0.01em;
+}
+
+.note strong {
+	font-weight: 500;
+}
+
+.note.advogado {
+	left: 14.2%;
+	top: 48%;
+
+	width: 95px;
+}
+
+.note.military {
+	left: 14.3%;
+	bottom: 8.2%;
+
+	width: 90px;
+}
+
+
+/* =========================================================
+   SOURCE
+========================================================= */
+
+.source {
+	position: absolute;
+
+	right: 13.4%;
+	top: 14.5%;
+
+	width: 55px;
+
+	z-index: 10;
+
+	font-family:
+		Arial,
+		Helvetica,
+		sans-serif;
+
+	font-size: clamp(4px, 0.52vw, 7px);
+
+	line-height: 1.05;
+}
+
+.source .photo {
+	display: block;
+
+	margin-bottom: 3px;
+
+	text-transform: uppercase;
+}
+
+
+/* =========================================================
+   RIGHT CAPTION
+========================================================= */
+
+.caption-right {
+	position: absolute;
+
+	right: 3.6%;
+	top: 26.3%;
+
+	width: 91px;
+
+	z-index: 9;
+
+	font-family:
+		Arial,
+		Helvetica,
+		sans-serif;
+
+	font-size: clamp(4px, 0.55vw, 8px);
+
+	line-height: 1.08;
+}
+
+
+/* =========================================================
+   LEFT CAPTION
+========================================================= */
+
+.caption-left {
+	position: absolute;
+
+	left: 3.4%;
+	top: 74.5%;
+
+	width: 70px;
+
+	z-index: 9;
+
+	font-family:
+		Arial,
+		Helvetica,
+		sans-serif;
+
+	font-size: clamp(4px, 0.52vw, 7px);
+
+	line-height: 1.05;
+}
+
+
+/* =========================================================
+   HALFTONE
+========================================================= */
+
+.halftone {
+	position: absolute;
+
+	z-index: 2;
+
+	opacity: 0.75;
+
+	background-image:
+		radial-gradient(
+			circle,
+			#d6e9ec 0.75px,
+			transparent 0.8px
+		);
+
+	background-size: 4px 4px;
+
+	pointer-events: none;
+}
+
+.halftone.one {
+	width: 90px;
+	height: 85px;
+
+	left: 13%;
+	bottom: -5%;
+
+	transform: rotate(-13deg);
+
+	clip-path: polygon(
+		15% 15%,
+		100% 0,
+		78% 70%,
+		0 100%
+	);
+}
+
+.halftone.two {
+	width: 75px;
+	height: 105px;
+
+	right: 42%;
+	top: 57%;
+
+	transform: rotate(12deg);
+
+	clip-path: polygon(
+		30% 0,
+		100% 25%,
+		72% 100%,
+		0 65%
+	);
+}
+
+
+/* =========================================================
+   MAP MARKS
+========================================================= */
+
+.map-mark {
+	position: absolute;
+
+	z-index: 8;
+
+	width: 3px;
+	height: 3px;
+
+	border: 0.5px solid #c8e2e5;
+
+	border-radius: 50%;
+}
+
+
+/* =========================================================
+   FULL PAGE LINK
+========================================================= */
+
+.enter {
+	position: absolute;
+
+	inset: 0;
+
+	z-index: 30;
+
+	display: block;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+	.statement-left {
+		font-size: clamp(24px, 4vw, 42px);
+	}
+
+	.statement-right {
+		font-size: clamp(22px, 3.8vw, 40px);
+	}
+
+	.note,
+	.caption-right,
+	.caption-left,
+	.source {
+		font-size: 6px;
+	}
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+	html,
+	body {
+		width: 100%;
+		min-height: 100%;
+	}
+
+	body {
+		overflow-x: hidden;
+	}
+
+	.landing {
+		width: 100%;
+		min-height: 100svh;
+
+		display: block;
+
+		padding: 0;
+	}
+
+	.page {
+
+		width: 100vw;
+
+		/*
+			Desktop uses the original 801:403 ratio.
+			Mobile becomes a tall editorial page.
+		*/
+
+		height: 165vw;
+
+		min-height: 100svh;
+
+		aspect-ratio: auto;
+
+		overflow: hidden;
+	}
+
+
+	/* =====================================================
+	   PAGE NUMBERS
+	===================================================== */
+
+	.page-number {
+		top: 4.5%;
+
+		font-size: 10px;
+	}
+
+	.page-number.left {
+		left: 6%;
+	}
+
+	.page-number.right {
+		right: 6%;
+	}
+
+
+	/* =====================================================
+	   LEFT STATEMENT
+	===================================================== */
+
+	.statement-left {
+
+		left: 6%;
+
+		top: 10%;
+
+		width: 78%;
+
+		font-size: 8.5vw;
+
+		line-height: 0.88;
+
+		letter-spacing: -0.06em;
+	}
+
+
+	/* =====================================================
+	   STATUE
+	===================================================== */
+
+	.statue {
+
+		left: 12%;
+
+		top: 25%;
+
+		width: 82%;
+
+		z-index: 4;
+	}
+
+
+	/* =====================================================
+	   RIGHT STATEMENT
+	===================================================== */
+
+	.statement-right {
+
+		right: 6%;
+
+		top: 64%;
+
+		width: 78%;
+
+		font-size: 7.5vw;
+
+		line-height: 0.91;
+
+		letter-spacing: -0.06em;
+	}
+
+
+	/* =====================================================
+	   SMALL NOTES
+	===================================================== */
+
+	.note {
+
+		font-size: 7px;
+
+		line-height: 1.08;
+	}
+
+	.note.advogado {
+
+		left: 6%;
+
+		top: 53%;
+
+		width: 100px;
+	}
+
+	.note.military {
+
+		left: 6%;
+
+		bottom: 7%;
+
+		width: 100px;
+	}
+
+
+	/* =====================================================
+	   SOURCE
+	===================================================== */
+
+	.source {
+
+		right: 7%;
+
+		top: 47%;
+
+		width: 85px;
+
+		font-size: 6px;
+	}
+
+
+	/* =====================================================
+	   RIGHT CAPTION
+	===================================================== */
+
+	.caption-right {
+
+		right: 6%;
+
+		top: 57%;
+
+		width: 90px;
+
+		font-size: 7px;
+	}
+
+
+	/* =====================================================
+	   LEFT CAPTION
+	===================================================== */
+
+	.caption-left {
+
+		left: 6%;
+
+		top: 78%;
+
+		width: 90px;
+
+		font-size: 7px;
+	}
+
+
+	/* =====================================================
+	   HALFTONES
+	===================================================== */
+
+	.halftone.one {
+
+		width: 110px;
+		height: 105px;
+
+		left: 4%;
+
+		bottom: -3%;
+	}
+
+	.halftone.two {
+
+		width: 90px;
+		height: 120px;
+
+		right: 8%;
+
+		top: 52%;
+	}
+
+
+	/* =====================================================
+	   MAP MARKS
+	===================================================== */
+
+	.map-mark {
+
+		width: 3px;
+		height: 3px;
+	}
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+	.page {
+		height: 175vw;
+	}
+
+	.statement-left {
+		font-size: 9vw;
+	}
+
+	.statement-right {
+		font-size: 8vw;
+	}
+
+	.note,
+	.caption-right,
+	.caption-left,
+	.source {
+		font-size: 6px;
+	}
+
+}
+
