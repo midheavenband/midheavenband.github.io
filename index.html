@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Midheaven I Alternative Band</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Midheaven</title>
+<link rel="stylesheet" href="style/style.css"/>
+<link rel="stylesheet" href="style/respon.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&display=swap" rel="stylesheet">
-<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon_io/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon_io/favicon-16x16.png">
-<link rel="manifest" href="images/favicon/favicon_io/site.webmanifest">
-<link rel="stylesheet" href="style/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -105,117 +102,63 @@
         "@id": "https://midheavenband.github.io/website/#midheaven"
       }
     },
-
-    {
-      "@type": "MusicAlbum",
-      "@id": "https://midheavenband.github.io/website/listenalbum.html#album",
-      "name": "Not That Far Away",
-      "byArtist": {
-        "@id": "https://midheavenband.github.io/website/#midheaven"
-      },
-      "datePublished": "2026-02-05",
-      "image": "https://midheavenband.github.io/website/img/album/front_0000_Not That Far Away.jpg",
-      "url": "https://midheavenband.github.io/website/listenalbum.html",
-      "genre": [
-        "Alternative Rock",
-        "Indie Rock"
-      ]
-    }
-
   ]
 }
 </script>
 </head>
-
 <body>
-<main class="landing">
-  <section class="page"> 
-    
-    <!-- PAGE NUMBERS -->
-    
-    <div class="page-number left"> 20 </div>
-    <div class="page-number right"> 27 </div>
-    
-    <!-- HALFTONES -->
-    
-    <div class="halftone one"></div>
-    <div class="halftone two"></div>
-    
-    <!-- MAIN LEFT STATEMENT -->
-    
-    <div class="statement-left serif"> WHEN SOMETHING
-      NEW STARTS, <em>WORRY COMES NEXT.</em> </div>
-    
-    <!-- STATUE --> 
-    
-    <!-- NOTE 01 -->
-    
-    <div class="note advogado"> <strong>[01]</strong><br>
-      <br>
-      A NEW PROJECT<br>
-      BY MIDHEAVEN<br>
-      COMING SOON </div>
-    
-    <!-- NOTE 02 -->
-    
-    <div class="note military"> <strong>[02]</strong><br>
-      <br>
-      WRITTEN,<br>
-      RECORDED AND<br>
-      PRODUCED<br>
-      INDEPENDENTLY </div>
-    
-    <!-- CAPTION LEFT -->
-    
-    <div class="caption-left"> <strong>[03]</strong><br>
-      <br>
-      THE FIRST PIECE<br>
-      IS COMING<br>
-      SOONER. </div>
-    
-    <!-- SOURCE -->
-    
-    <div class="source"> <span class="photo"> [04] </span> <br>
-      NOT EVERYTHING<br>
-      THAT COLLAPSES<br>
-      IS LOST. </div>
-    
-    <!-- CAPTION RIGHT -->
-    
-    <div class="caption-right"> [05]<br>
-      <br>
-      PROJECT STATUS<br>
-      IN PROGRESS </div>
-    
-    <!-- MAIN RIGHT STATEMENT -->
-    
-    <div class="statement-right serif"> SOMETHING NEW
-      IS ALREADY TAKING
-      SHAPE UNDERNEATH
-      THE OLD. </div>
-    
-    <!-- MAP MARKS -->
-    
-    <div
-			class="map-mark"
-			style="left:72%;top:18%;"
-		></div>
-    <div
-			class="map-mark"
-			style="left:78%;top:31%;"
-		></div>
-    <div
-			class="map-mark"
-			style="left:83%;top:44%;"
-		></div>
-    
-    <!-- FULL PAGE LINK --> 
-    
-    <a
-			class="enter"
-			href="#"
-			aria-label="Enter"
-		></a> </section>
+<main class="hero-page">
+  <header class="site-header"> <a class="brand" href="index.html" aria-label="Home"> <img src="images/logo/Logo.png" alt="Midheaven Logo" /> </a> <a class="order-button" href="la-cd.html">STORE</a> </header>
+  <section class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title"> <span class="headline-line">Live  at the</span> <span class="headline-line">Radio<a href="la-cd.html"><img class="headline-image" src="images/newest-release/laarr-cover.jpg" alt="Live at the Radio Rapes - Album Cover" /></a> Rapes</span><span class="headline-line">Out on your favorite</span><span class="headline-line"> streaming platform.</span> </h1>
+    <p class="hero-description"> Midheaven played live on Radio Rapes on 10 March 2026 from 3PM to 4PM (CET)<br class="desktop-break" />
+      presenting and discussing their debut album Not That Far Away.<br class="desktop-break" />
+    </p>
+    <p class="streaming-hint"> <span class="hint-dot" aria-hidden="true"></span> Tap the blue dot to listen to the album </p>
+  </section>
+  <button
+  class="sun-dot"
+  id="open-streaming"
+  type="button"
+  aria-label="Open streaming platforms"
+  aria-controls="streaming-panel"
+  aria-expanded="false"
+></button>
+  <div class="streaming-overlay" id="streaming-overlay" aria-hidden="true">
+    <section
+    class="streaming-panel"
+    id="streaming-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="streaming-title"
+    tabindex="-1"
+  >
+      <button
+      class="streaming-close"
+      id="close-streaming"
+      type="button"
+      aria-label="Close streaming panel"
+    >&times;</button>
+      <div class="streaming-cover"> <img
+    src="images/newest-release/laarr-cover.jpg"
+    alt="Live at the Radio Rapes album cover"
+  /> </div>
+      <div class="streaming-info">
+        <div class="streaming-band-name"> Midheaven </div>
+        <div class="streaming-album-name"> Live at the Radio Rapes </div>
+        <div class="streaming-subtitle"> Choose your favorite platform </div>
+      </div>
+      <div class="streaming-content">
+        <div class="streaming-links"> <a href="https://open.spotify.com/album/273GfdaDH1S3dHUnFiT1lQ" class="streaming-link" target="_blank" rel="noopener noreferrer"> <img class="platform-logo" src="images/logo/streaming-platforms/spotify.png" alt="" /> <span>Spotify</span><span class="platform-arrow" aria-hidden="true"></span> </a> <a href="https://music.apple.com/sk/album/live-at-the-radio-rapes/1894158881" class="streaming-link" target="_blank" rel="noopener noreferrer"> <img class="platform-logo" src="images/logo/streaming-platforms/applemusic.png" alt="" /> <span>Apple Music</span> <span class="platform-arrow" aria-hidden="true"></span> </a> <a href="https://music.apple.com/sk/album/live-at-the-radio-rapes/1894158881" class="streaming-link" target="_blank" rel="noopener noreferrer"> <img class="platform-logo" src="images/logo/streaming-platforms/itunes.png" alt="" /> <span>iTunes</span> <span class="platform-arrow" aria-hidden="true"></span> </a> <a href="https://www.deezer.com/sk/album/963553131" class="streaming-link" target="_blank" rel="noopener noreferrer"> <img class="platform-logo" src="images/logo/streaming-platforms/deezer.png" alt="" /> <span>Deezer</span> <span class="platform-arrow" aria-hidden="true"></span> </a> <a href="https://music.youtube.com/playlist?list=OLAK5uy_luXf8ZHmE8_w20KJ14u77uV0dmDmUbhFc" class="streaming-link" target="_blank" rel="noopener noreferrer"> <img class="platform-logo" src="images/logo/streaming-platforms/youtube-music.png" alt="" /> <span>YouTube Music</span><span class="platform-arrow" aria-hidden="true"></span> </a> <a href="https://music.amazon.com/albums/B0GXJM2747" class="streaming-link" target="_blank" rel="noopener noreferrer"> <img class="platform-logo" src="images/logo/streaming-platforms/amazon-music.png" alt="" /> <span>Amazon Music</span> <span class="platform-arrow" aria-hidden="true"></span> </a> <a href="https://www.pandora.com/AL:65279863" class="streaming-link" target="_blank" rel="noopener noreferrer"> <img class="platform-logo" src="images/logo/streaming-platforms/pandora.png" alt="" /> <span>Pandora</span> <span class="platform-arrow" aria-hidden="true"></span> </a> </div>
+      </div>
+    </section>
+  </div>
 </main>
+<script src="style/java.js"></script>
+<section id="entity-confirmation" style="display:none">
+  <h1>Midheaven — Slovak Alternative Rock Band</h1>
+  <p> Midheaven is a Slovak alternative rock band formed in 2021.
+    The band is also known as Stredneba. </p>
+</section>
 </body>
 </html>

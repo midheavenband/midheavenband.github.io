@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Live at the Radio Rapes - CD</title>
+<link rel="stylesheet" href="style/style.css"/>
+<link rel="stylesheet" href="style/respon.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header class="site-header"> <a class="brand" href="index.html" aria-label="Home"> <img src="images/logo/Logo.png" alt="Midheaven Logo" /> </a> <a class="order-button" href="index.html">HOME</a> </header>
+<main class="product-page" id="catalog">
+  <div class="thumbnail-list" aria-label="Product images">
+    <button class="thumbnail active" type="button"
+        data-image="images/store/LATRR-CD.png"
+        aria-label="View front of CD" aria-pressed="true"> <img src="images/store/LATRR-CD.png" alt="CD front" /> </button>
+    <button class="thumbnail" type="button"
+        data-image="images/store/LATRR-CD-BACK.png"
+        aria-label="View back of CD" aria-pressed="false"> <img src="images/store/LATRR-CD-BACK.png" alt="CD back" /> </button>
+  </div>
+  <section class="product-visual" aria-label="Album CD product image">
+    <div class="product-image-wrap"> <img
+          class="product-image"
+          id="main-product-image"
+          src="images/store/LATRR-CD.png"
+          alt="Midheaven album CD"
+        /> </div>
+  </section>
+  <aside class="product-details">
+    <h1 class="product-title">LIVE AT THE RADIO RAPES – CD</h1>
+    <p>€15</p>
+    <hr class="hr">
+    <div class="product-order">
+      <div class="product-quantity" aria-label="Quantity: 1"> <span class="quantity-number">1</span> </div>
+      <a
+  class="product-order-button"
+  href="mailto:strednebarecords@gmail.com?subject=Live%20at%20the%20Radio%20Rapes%20%E2%80%94%20CD%20Order&body=Hello%20Midheaven%2C%0D%0A%0D%0AI%27d%20like%20to%20order%20the%20limited%20edition%20CD%20of%20Live%20at%20the%20Radio%20Rapes.%0D%0A%0D%0A%E2%80%94%20ORDER%20DETAILS%20%E2%80%94%0D%0ALive%20at%20the%20Radio%20Rapes%20%E2%80%94%20Limited%20Edition%20CD%0D%0ATotal%3A%20%E2%82%AC14.99%20(including%20%E2%82%AC1%20shipping)%0D%0A%0D%0A%E2%80%94%20BANK%20TRANSFER%20%E2%80%94%0D%0AAccount%20name%3A%20Jakub%20Huda%C4%8Dek%0D%0AIBAN%3A%20SK61%201100%200000%200029%203832%209711%0D%0AAmount%3A%20%E2%82%AC14.99%0D%0APayment%20reference%3A%20LATR%20%2B%20your%20full%20name%0D%0A%0D%0APlease%20complete%20the%20bank%20transfer%20before%20sending%20your%20order%20confirmation.%0D%0A%0D%0A%E2%80%94%20SHIPPING%20DETAILS%20%E2%80%94%0D%0AFull%20name%3A%0D%0AStreet%20address%3A%0D%0APostal%20code%20%2F%20City%3A%0D%0ACountry%3A%0D%0A%0D%0AI%20have%20attached%20my%20payment%20receipt%20to%20this%20email.%0D%0A%0D%0AThank%20you."
+> ADD TO CART </a> </div>
+    <p class="product-description"><br>
+      Midheaven played live on Radio Rapes on 10 March 2026 from 3PM to 4PM (CET), presenting and discussing the band’s album Not That Far Away. </p>
+    <p class="product-description">The one-hour broadcast focused on the ideas behind the record, the circumstances in which it was written, and the atmosphere that shaped the songs. </p>
+    <p class="product-description">Please note due to the custom manufacture process, each cd unit is unique and may be slightly different in coloration. </p>
+    <p class="product-description"> Limited to 1 unit per customer. </p>
+    <div class="product-accordions">
+      <section class="accordion">
+        <button class="accordion-toggle"
+            type="button" aria-expanded="false"> <span>Delivery</span> <span class="accordion-arrow" aria-hidden="false"></span> </button>
+        <div class="accordion-content">
+          <p>Ships within 5–7 business days.</p>
+        </div>
+      </section>
+      <section class="accordion">
+        <div class="accordion-content">
+          <p>Artist: Midheaven</p>
+          <p>Album: Live at the Radio Rapes</p>
+          <p>Format: Physical CD</p>
+          <p>Genre: Alternative</p>
+        </div>
+      </section>
+      <section class="accordion">
+        <div class="accordion-content">
+          <p>Keep the CD in its case when not in use.</p>
+          <p>Avoid scratches, direct sunlight, and extreme temperatures.</p>
+          <p>Clean gently with a soft, lint-free cloth, wiping from the center outward.</p>
+        </div>
+      </section>
+    </div>
+  </aside>
+</main>
+</body>
+<script>
+	const thumbnails = document.querySelectorAll(".thumbnail");
+    const mainImage = document.getElementById("main-product-image");
+
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.addEventListener("click", () => {
+        const imagePath = thumbnail.dataset.image;
+
+        mainImage.style.opacity = "0";
+
+        window.setTimeout(() => {
+          mainImage.src = imagePath;
+          mainImage.style.opacity = "1";
+        }, 120);
+
+        thumbnails.forEach((item) => {
+          item.classList.remove("active");
+          item.setAttribute("aria-pressed", "false");
+        });
+
+        thumbnail.classList.add("active");
+        thumbnail.setAttribute("aria-pressed", "true");
+      });
+    });
+
+    // ACCORDIONS
+
+    document.querySelectorAll(".accordion-toggle").forEach((button) => {
+      button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+        const isOpen = button.getAttribute("aria-expanded") === "true";
+
+        button.setAttribute("aria-expanded", String(!isOpen));
+        content.classList.toggle("open", !isOpen);
+      });
+    });
+
+    // BASIC BAG COUNTER DEMO
+
+    let bagCount = 0;
+
+    document.getElementById("add-to-bag").addEventListener("click", () => {
+      bagCount += 1;
+      document.getElementById("bag-count").textContent = bagCount;
+    });
+	
+ </script>
+</html>
